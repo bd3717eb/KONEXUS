@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Integra_Develoment", "Integra_Develoment\Integra_Develoment.csproj", "{063C3A78-32E6-4BA2-B60C-B33F38769ADA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegraBussines", "IntegraBussines\IntegraBussines.csproj", "{D21F48D7-58A1-4334-B8D2-280A62959E46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegraData", "IntegraData\IntegraData.csproj", "{42BACFC4-3E6C-40F0-8CD4-7C26348BACA8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{063C3A78-32E6-4BA2-B60C-B33F38769ADA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{063C3A78-32E6-4BA2-B60C-B33F38769ADA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{063C3A78-32E6-4BA2-B60C-B33F38769ADA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{063C3A78-32E6-4BA2-B60C-B33F38769ADA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D21F48D7-58A1-4334-B8D2-280A62959E46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D21F48D7-58A1-4334-B8D2-280A62959E46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D21F48D7-58A1-4334-B8D2-280A62959E46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D21F48D7-58A1-4334-B8D2-280A62959E46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42BACFC4-3E6C-40F0-8CD4-7C26348BACA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42BACFC4-3E6C-40F0-8CD4-7C26348BACA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42BACFC4-3E6C-40F0-8CD4-7C26348BACA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42BACFC4-3E6C-40F0-8CD4-7C26348BACA8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D21F48D7-58A1-4334-B8D2-280A62959E46}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IntegraBussines</RootNamespace>
+    <AssemblyName>IntegraBussines</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath />
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ionic.Zip">
+      <HintPath>bin\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlmacenBLL.cs" />
+    <Compile Include="AlmacenConsultaEntradasBLL.cs" />
+    <Compile Include="BandasBLL.cs" />
+    <Compile Include="BankAccountBLL.cs" />
+    <Compile Include="CajaBLL.cs" />
+    <Compile Include="CancelInvoiceControlsBLL.cs" />
+    <Compile Include="CfdiBLL.cs" />
+    <Compile Include="ClBuscarDevolucion.cs" />
+    <Compile Include="ClnuevoMensaje.cs" />
+    <Compile Include="ConfiguracionVentaController.cs" />
+    <Compile Include="ConsultaAutocomplete.cs" />
+    <Compile Include="ContactBLL.cs" />
+    <Compile Include="ControlContabilidadElectronica.cs" />
+    <Compile Include="ControlCuentasPagar.cs" />
+    <Compile Include="ControlesController.cs" />
+    <Compile Include="ControlProveedorAcreedor.cs" />
+    <Compile Include="ControlReportBalance.cs" />
+    <Compile Include="ControlVentasVisor.cs" />
+    <Compile Include="Control_Cuentas_Cobrar1.cs" />
+    <Compile Include="CreditNotesBLL.cs" />
+    <Compile Include="CustomerBLL.cs" />
+    <Compile Include="ControlsBLL.cs" />
+    <Compile Include="DevolucionController.cs" />
+    <Compile Include="FacturacionBLL.cs" />
+    <Compile Include="FacturacionCancelacionController.cs" />
+    <Compile Include="FacturaLibreController.cs" />
+    <Compile Include="GastosBLL.cs" />
+    <Compile Include="HerramientasController.cs" />
+    <Compile Include="ICompanyController.cs" />
+    <Compile Include="ImpuestosBLL.cs" />
+    <Compile Include="InvoiceBLL.cs" />
+    <Compile Include="LOG.cs" />
+    <Compile Include="PersonaController.cs" />
+    <Compile Include="PersonBLL.cs" />
+    <Compile Include="PolizasBLL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProviderBLL.cs" />
+    <Compile Include="ReporteController.cs" />
+    <Compile Include="SaleBLL.cs" />
+    <Compile Include="SaleDetailBLL.cs" />
+    <Compile Include="SalesReportsBLL.cs" />
+    <Compile Include="SalesStoresBLL.cs" />
+    <Compile Include="SecurityController.cs" />
+    <Compile Include="SmtpMail.cs" />
+    <Compile Include="TipoCambioController.cs" />
+    <Compile Include="toolsBLL.cs" />
+    <Compile Include="TransaccionContableBLL.cs" />
+    <Compile Include="UserBLL.cs" />
+    <Compile Include="VentasController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IntegraData\IntegraData.csproj">
+      <Project>{42BACFC4-3E6C-40F0-8CD4-7C26348BACA8}</Project>
+      <Name>IntegraData</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

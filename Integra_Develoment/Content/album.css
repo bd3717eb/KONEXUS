@@ -1,0 +1,100 @@
+body {
+    /*min-height: 1rem;  Can be removed; just added for demo purposes */
+    font-family:  Verdana,Arial, Helvetica;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.navbar-collapse .container-fluid {
+    padding: 2rem 2.5rem;
+    border-bottom: 1px solid #55595c;
+}
+
+.navbar-collapse h4 {
+    color: #818a91;
+}
+
+.navbar-collapse .text-muted {
+    color: #818a91;
+}
+
+.about {
+    float: left;
+    max-width: 30rem;
+    margin-right: 3rem;
+}
+
+.social a {
+    font-weight: 500;
+    color: #eceeef;
+}
+
+    .social a:hover {
+        color: #fff;
+    }
+
+.jumbotron {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    margin-bottom: 0;
+    background-color: #fff;
+}
+
+    .jumbotron p:last-child {
+        margin-bottom: 0;
+    }
+
+.jumbotron-heading {
+    font-weight: 300;
+}
+
+.jumbotron .container {
+    max-width: 40rem;
+}
+
+.album {
+    min-height: 5rem; /* Can be removed; just added for demo purposes */
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    /*background-color: #f7f7f7;*/
+}
+
+.card {
+    float: left;
+    width: 25%;
+    padding: .75rem;
+    margin-bottom: 2rem;
+    border: 0;
+}
+
+    .card > img {
+        margin-bottom: .75rem;
+    }
+
+        .card > img:hover {
+            -webkit-border-radius: 12px;
+            border-radius: 82px;
+            opacity: 0.9;
+            -webkit-box-shadow: 2px 15px 20px rgba(0,0,0,0.5);
+            -moz-box-shadow: 2px 15px 20px rgba(0,0,0,0.5);
+            box-shadow: 2px 15px 20px rgba(0,0,0,0.5);
+            cursor: pointer;
+            /*background-color: #f1f1f1;*/
+        }
+
+.card-text {
+    font-size: 85%;
+    font-family:  Verdana,Arial, Helvetica;
+}
+
+
+footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+    footer p {
+        margin-bottom: .25rem;
+    }
