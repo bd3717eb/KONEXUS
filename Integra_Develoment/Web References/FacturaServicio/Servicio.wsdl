@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.integrasoftware.com.mx/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.integrasoftware.com.mx/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.integrasoftware.com.mx/">
+      <s:element name="gf_CreaPolizaContable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="iMes" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iAnio" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iEmpresa" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTipoSolicitud" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sBaseDatos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sNumeroOrden" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sParametrosOpcional" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="gf_CreaPolizaContableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gf_CreaPolizaContableResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="gfs_Crea_FacturaXMLaPDF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sBodyXML" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sNombreArchivoConExtension" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sBaseDatos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sRutaAGuardar" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sImagen" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iTipoFacturaNotaCredito" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="gfs_Crea_FacturaXMLaPDFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gfs_Crea_FacturaXMLaPDFResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="gfs_generaComprobanteFisica">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="iNumeroFactura" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iTipoFacturaNotaCredito" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDataBaseName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iNumeroCompania" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iNumeroPersona" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sParametroOpcional" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="gfs_generaComprobanteFisicaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gfs_generaComprobanteFisicaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="gf_CreaPolizaContableSoapIn">
+    <wsdl:part name="parameters" element="tns:gf_CreaPolizaContable" />
+  </wsdl:message>
+  <wsdl:message name="gf_CreaPolizaContableSoapOut">
+    <wsdl:part name="parameters" element="tns:gf_CreaPolizaContableResponse" />
+  </wsdl:message>
+  <wsdl:message name="gfs_Crea_FacturaXMLaPDFSoapIn">
+    <wsdl:part name="parameters" element="tns:gfs_Crea_FacturaXMLaPDF" />
+  </wsdl:message>
+  <wsdl:message name="gfs_Crea_FacturaXMLaPDFSoapOut">
+    <wsdl:part name="parameters" element="tns:gfs_Crea_FacturaXMLaPDFResponse" />
+  </wsdl:message>
+  <wsdl:message name="gfs_generaComprobanteFisicaSoapIn">
+    <wsdl:part name="parameters" element="tns:gfs_generaComprobanteFisica" />
+  </wsdl:message>
+  <wsdl:message name="gfs_generaComprobanteFisicaSoapOut">
+    <wsdl:part name="parameters" element="tns:gfs_generaComprobanteFisicaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServicioSoap">
+    <wsdl:operation name="gf_CreaPolizaContable">
+      <wsdl:input message="tns:gf_CreaPolizaContableSoapIn" />
+      <wsdl:output message="tns:gf_CreaPolizaContableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="gfs_Crea_FacturaXMLaPDF">
+      <wsdl:input message="tns:gfs_Crea_FacturaXMLaPDFSoapIn" />
+      <wsdl:output message="tns:gfs_Crea_FacturaXMLaPDFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="gfs_generaComprobanteFisica">
+      <wsdl:input message="tns:gfs_generaComprobanteFisicaSoapIn" />
+      <wsdl:output message="tns:gfs_generaComprobanteFisicaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServicioSoap" type="tns:ServicioSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="gf_CreaPolizaContable">
+      <soap:operation soapAction="http://www.integrasoftware.com.mx/gf_CreaPolizaContable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gfs_Crea_FacturaXMLaPDF">
+      <soap:operation soapAction="http://www.integrasoftware.com.mx/gfs_Crea_FacturaXMLaPDF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gfs_generaComprobanteFisica">
+      <soap:operation soapAction="http://www.integrasoftware.com.mx/gfs_generaComprobanteFisica" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServicioSoap12" type="tns:ServicioSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="gf_CreaPolizaContable">
+      <soap12:operation soapAction="http://www.integrasoftware.com.mx/gf_CreaPolizaContable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gfs_Crea_FacturaXMLaPDF">
+      <soap12:operation soapAction="http://www.integrasoftware.com.mx/gfs_Crea_FacturaXMLaPDF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gfs_generaComprobanteFisica">
+      <soap12:operation soapAction="http://www.integrasoftware.com.mx/gfs_generaComprobanteFisica" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Servicio">
+    <wsdl:port name="ServicioSoap" binding="tns:ServicioSoap">
+      <soap:address location="http://189.206.75.72/ServicioCFDI/Servicio.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServicioSoap12" binding="tns:ServicioSoap12">
+      <soap12:address location="http://189.206.75.72/ServicioCFDI/Servicio.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

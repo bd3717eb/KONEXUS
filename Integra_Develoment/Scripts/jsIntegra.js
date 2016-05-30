@@ -1,28 +1,52 @@
-﻿
+﻿// ===========================================================
+// 26.05.2016
+// lfToogle se paso a jsIntegra para que sea visible en todas las webforms heredades de la masterpage mpIntegraCompany
+function lfToogle(pPropiedades) {
+    var bandera = true;
+
+    //debugger;
+    var divs = document.getElementsByClassName(pPropiedades.id);
+    if (divs[0].style.display == 'none')
+        bandera = false;
+
+    if (bandera) {
+        for (var i = 0; i < divs.length; i++) {
+            divs[i].style.display = 'none';
+            bandera = false;
+        }
+    } else {
+        for (var i = 0; i < divs.length; i++) {
+            divs[i].style.display = 'block';
+            bandera = true;
+        }
+    }
+}
+// ===========================================================
+
 // BEGIN FUNCIONES JAVASCRIPT USADAS 
 // ============================================================
 // plugin js
 // ============================================================
-jQuery.fn.ForceNumericOnly =
-function () {
-    return this.each(function () {
-        $(this).keydown(function (e) {
-            var key = e.charCode || e.keyCode || 0;
-            // @eblaher
-            // allow backspace, tab, delete, arrows, numbers and keypad numbers ONLY
-            // home, end, period, and numpad decimal
-            return (
-                key == 8 ||
-                key == 9 ||
-                key == 46 ||
-                key == 110 ||
-                key == 190 ||
-                (key >= 35 && key <= 40) ||
-                (key >= 48 && key <= 57) ||
-                (key >= 96 && key <= 105));
-        });
-    });
-};
+//$.fn.ForceNumericOnly =
+//function () {
+//    return this.each(function () {
+//        $(this).keydown(function (e) {
+//            var key = e.charCode || e.keyCode || 0;
+//            // @eblaher
+//            // allow backspace, tab, delete, arrows, numbers and keypad numbers ONLY
+//            // home, end, period, and numpad decimal
+//            return (
+//                key == 8 ||
+//                key == 9 ||
+//                key == 46 ||
+//                key == 110 ||
+//                key == 190 ||
+//                (key >= 35 && key <= 40) ||
+//                (key >= 48 && key <= 57) ||
+//                (key >= 96 && key <= 105));
+//        });
+//    });
+//};
 
 // ============================================================
 // end plugin js
@@ -62,7 +86,7 @@ function lfUnidadNegocio(parametro) {
 
     $.ajax({
         type: "POST",
-        url: "../Default.aspx/CambiaValorUnidad",
+        url: "../Background.aspx/CambiaValorUnidad",
         data: "{ valor:'" + parametro + "'}",
         contentType: "application/json; charset=utf-8",
         dataType: "json",
@@ -156,5 +180,4 @@ function gfMuestraNotificacion2() {
 //        $(this).children("a").css({ backgroundImage: "none" });
 //    });
 //});
-
 

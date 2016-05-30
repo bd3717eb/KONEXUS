@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SaleDocumentReport" targetNamespace="http://tempuri.org/SaleDocumentReport.xsd" xmlns:mstns="http://tempuri.org/SaleDocumentReport.xsd" xmlns="http://tempuri.org/SaleDocumentReport.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SaleDocumentReport" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="SaleDocumentReport" msprop:Generator_UserDSName="SaleDocumentReport">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SaleDocument" msprop:Generator_TableClassName="SaleDocumentDataTable" msprop:Generator_TableVarName="tableSaleDocument" msprop:Generator_TablePropName="SaleDocument" msprop:Generator_RowDeletingName="SaleDocumentRowDeleting" msprop:Generator_UserTableName="SaleDocument" msprop:Generator_RowChangingName="SaleDocumentRowChanging" msprop:Generator_RowEvHandlerName="SaleDocumentRowChangeEventHandler" msprop:Generator_RowDeletedName="SaleDocumentRowDeleted" msprop:Generator_RowEvArgName="SaleDocumentRowChangeEvent" msprop:Generator_RowChangedName="SaleDocumentRowChanged" msprop:Generator_RowClassName="SaleDocumentRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Documento" msprop:Generator_ColumnVarNameInTable="columnDocumento" msprop:Generator_ColumnPropNameInRow="Documento" msprop:Generator_ColumnPropNameInTable="DocumentoColumn" msprop:Generator_UserColumnName="Documento" type="xs:string" minOccurs="0" />
+              <xs:element name="Numero" msprop:Generator_ColumnVarNameInTable="columnNumero" msprop:Generator_ColumnPropNameInRow="Numero" msprop:Generator_ColumnPropNameInTable="NumeroColumn" msprop:Generator_UserColumnName="Numero" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

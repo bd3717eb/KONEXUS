@@ -1,0 +1,226 @@
+// ================================================================================
+// VARIABLES
+
+@font-page: Verdana, Geneva, sans-serif;
+@backgroundcolorwhite: #ffffff;
+@backgroundcolorlighwhite: #f1f1f1;
+@backgroundcolorgray: #5b5b5b;
+@backgroundcolorblack: #000000;
+
+@backgroundRED: #a61b26;
+@backgroundLIGHTGRAY: #f1f1f1;
+@backgroundLeftMenu: #e7e7e7;
+
+// ================================================================================
+// VARIABLES LETTER
+
+@letterWHITE: #ffffff;
+@letterRED: #ff0000;
+@letterBLACK: #000000;
+
+// ================================================================================
+// CONTROLS HTML
+@backControls: #F5F5DC;
+@borderControls: #556370;
+@hoverControls: #f5f5d1;
+
+// ================================================================================
+// LIGAS
+.rule_linksAccion {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+// ================================================================
+// CSS MASTER PAGE
+body {
+    margin: 0;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    /*background: @backgroundcolorwhite url(../Images/back7.jpg);*/
+    background: @backgroundcolorwhite;
+    font-family: @font-page;
+    font-size-adjust: 0.40;
+    font-size: 14px;
+}
+
+.cCargando {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: fixed;
+    opacity: 0.8;
+    filter: alpha(opacity=80); /* Internet Explorer 8*/
+    z-index: 19999;
+    transition: width 2s;
+    -moz-transition: width 2s; /* Firefox 4 */
+    -webkit-transition: width 2s; /* Safari and Chrome */
+    -o-transition: width 2s; /* Opera */
+    cursor: progress;
+    background-color: @backgroundcolorgray;
+    color: @letterWHITE;
+    font-size: 1.3em;
+    font-family: @font-page;
+}
+
+.cCargandoImg {
+    cursor: progress;
+    position: absolute;
+    top: 32%;
+    right: 45%;
+    left: 35%;
+    filter: alpha(opacity=80); /* Internet Explorer 8*/
+    opacity: 0.8;
+    margin: auto;
+    width: 350px;
+    text-align: center;
+    height: 150px;
+    padding: 10px;
+    background-color: @backgroundcolorgray;
+    color: @letterWHITE;
+    font-family: @font-page;
+    font-size: 1.3em;
+}
+
+.mainmenu {
+    background-color: @backgroundRED;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    /*border-top-color: #f1f1f1;
+    border-bottom-color: #f1f1f1;*/
+    position: relative;
+    top: 0;
+    padding-left: 0px;
+    list-style-type: none;
+    list-style: none;
+    height: 41px;
+    color: @letterWHITE;
+    font-size: larger;
+    text-align: center;
+    .rule_linksAccion;
+}
+
+.mainmenu li {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: inline; /*internet explorer*/
+    display: inline-block;
+    color: @letterWHITE;
+    .rule_linksAccion;
+}
+
+.mainmenu li a {
+    color: @backgroundcolorwhite;
+    .rule_linksAccion;
+}
+
+.mainmenu li a:hover {
+    color: #556370;
+    .rule_linksAccion;
+}
+
+.mainmenu li a:visited {
+    color: @letterWHITE;
+    .rule_linksAccion;
+}
+/*  HEADER */
+#divImg {
+    float: left;
+    width: 33%;
+    height: 114px;
+}
+
+#divCompanytitle {
+    font-size: 10px;
+    font-weight: 100;
+    font-family: @font-page;
+    display: inline-block;
+    width: 33%;
+    background-color: @backgroundLIGHTGRAY; /*height: auto;*/
+    height: 114px;
+}
+
+#divUser {
+    height: 82px;
+    float: right;
+    width: 33%;
+    font-size: 10px;
+    font-weight: 100;
+    font-family: @font-page;
+    text-align: right;
+    top: 0px;
+    height: 114px; /*height: auto;*/
+    margin-top: 1%; /*ultimo agregado correccion fixed*/
+}
+
+#divFooter {
+    position: fixed;
+    bottom: 0; /**top: 0px;*/
+    width: 100%;
+    height: 20px; /*color: #333;*/
+    background-color: @borderControls;
+    z-index: 100;
+    text-align: center;
+    color: @backgroundcolorlighwhite;
+    font-size: 10px;
+}
+// ==========================================================================
+// MENU RIGHT
+// ==========================================================================
+#divMenuRightVentas {
+    right: 0;
+    background-color: @backgroundLeftMenu;
+    position: absolute;
+    width: 275px;
+    height: 22px;
+    text-align: left;
+    .rule_linksAccion;
+}
+
+// ==========================================================================
+// HTML CONTROLS
+// ==========================================================================
+.rule_border {
+    border-color: @borderControls;
+    background-color: @backControls;
+}
+
+.DropDown {
+    font-family: @font-page;
+    font-size: 10px;
+    width: 120px;
+    .rule_border;
+}
+
+.DropDown:hover {
+    background-color: @hoverControls;
+}
+
+// ==========================================================================
+// AJAX CONTROL TOOLKIT
+// ==========================================================================
+.autocomplete_highlightedListItem {
+    font-family: @font-page;
+    font-size: 10px;
+    background-color: @backControls;
+    color: @letterBLACK;
+    padding: 1px;
+}
+
+.autocomplete_listItem {
+    border: 1px;
+    border-style: dotted;
+    font-family: @font-page;
+    font-size: 10px;
+    background-color: @backControls;
+    color: @letterBLACK;
+    padding: 1px;
+    z-index: 2000;
+}

@@ -96,7 +96,7 @@ namespace IntegraBussines
         //    if (pIDCompania != 0)
         //    {
         //    }
-        //    return @"<img id='idIMG' src='../Images/Master/logo.PNG' alt='img' height='81' width='178' />";
+        //    return @"<img id='idIMG' src='../Images/logo.png' alt='img' height='81' width='178' />";
         //}
         public static string gfCompaniaPathImg(int pIDCompania)
         {
@@ -116,16 +116,16 @@ namespace IntegraBussines
                     if (System.IO.File.Exists(rutaRaiz))
                         return @"<img id='idIMG' src='" + ruta + "' alt='img' height='81' width='178' />";
                     else
-                        return @"<img id='idIMG' src='../Images/Master/logo.PNG' alt='img' height='81' width='178' />";
+                        return @"<img id='idIMG' src='../Images/logo.png' alt='img' height='81' width='178' />";
                 }
                 else
                 {
-                    return @"<img id='idIMG' src='../Images/Master/logo.PNG' alt='img' height='81' width='178' />";
+                    return @"<img id='idIMG' src='../Images/logo.png' alt='img' height='81' width='178' />";
                 }
             }
             catch
             {
-                return @"<img id='idIMG' src='../Images/Master/logo.PNG' alt='img' height='81' width='178' />";
+                return @"<img id='idIMG' src='../Images/logo.png' alt='img' height='81' width='178' />";
             }
         }
 
@@ -253,16 +253,16 @@ namespace IntegraBussines
                     if (System.IO.File.Exists(rutaRaiz))
                         return @"<a href='../MainMenuV2.html'> <img id='idIMG' src='" + ruta + "' alt='img' height='81' width='178' /></a>";
                     else
-                        return @"<a href='../MainMenuV2.html'><img id='idIMG' src='../Images/Master/logo.PNG' alt='img' height='81' width='178' /> </a>";
+                        return @"<a href='../MainMenuV2.html'><img id='idIMG' src='../Images/logo.png' alt='img' height='81' width='178' /> </a>";
                 }
                 else
                 {
-                    return @"<a href='../MainMenuV2.html'><img id='idIMG' src='../Images/Master/logo.PNG' alt='img' height='81' width='178' /> </a>";
+                    return @"<a href='../MainMenuV2.html'><img id='idIMG' src='../Images/logo.png' alt='img' height='81' width='178' /> </a>";
                 }
             }
             catch
             {
-                return @"<img id='idIMG' src='../Images/Master/logo.PNG' alt='img' height='81' width='178' />";
+                return @"<img id='idIMG' src='../Images/logo.png' alt='img' height='81' width='178' />";
             }
         }
         #endregion

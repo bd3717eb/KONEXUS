@@ -25,6 +25,18 @@ namespace Integra_Develoment
         #region Web.Services
 
         [WebMethod]
+        public static void CambiaValorUnidad(string valor)
+        {
+            try
+            {
+                HttpContext.Current.Session["Office"] = valor;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+        }
+        [WebMethod]
         public static void gfSalirdelSistema()
         {
 
@@ -43,18 +55,6 @@ namespace Integra_Develoment
                 Debug.WriteLine(ex.Message);
             }
 
-        }
-
-        [WebMethod]
-        public static void CambiaValorUnidad(string valor)
-        {
-            try
-            {
-                HttpContext.Current.Session["Office"] = valor;
-            }
-            catch (Exception ex)
-            {
-            }
         }
 
 

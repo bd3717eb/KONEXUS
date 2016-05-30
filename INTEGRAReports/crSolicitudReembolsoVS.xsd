@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="crSolicitudReembolsoVS" targetNamespace="http://tempuri.org/crSolicitudReembolsoVS.xsd" xmlns:mstns="http://tempuri.org/crSolicitudReembolsoVS.xsd" xmlns="http://tempuri.org/crSolicitudReembolsoVS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="crSolicitudReembolsoVS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="crSolicitudReembolsoVS" msprop:Generator_UserDSName="crSolicitudReembolsoVS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Empresa" msprop:Generator_TableClassName="EmpresaDataTable" msprop:Generator_TableVarName="tableEmpresa" msprop:Generator_TablePropName="Empresa" msprop:Generator_RowDeletingName="EmpresaRowDeleting" msprop:Generator_UserTableName="Empresa" msprop:Generator_RowChangingName="EmpresaRowChanging" msprop:Generator_RowEvHandlerName="EmpresaRowChangeEventHandler" msprop:Generator_RowDeletedName="EmpresaRowDeleted" msprop:Generator_RowEvArgName="EmpresaRowChangeEvent" msprop:Generator_RowChangedName="EmpresaRowChanged" msprop:Generator_RowClassName="EmpresaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Logo" msprop:Generator_ColumnVarNameInTable="columnLogo" msprop:Generator_ColumnPropNameInRow="Logo" msprop:Generator_ColumnPropNameInTable="LogoColumn" msprop:Generator_UserColumnName="Logo" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Reembolso" msprop:Generator_TableClassName="ReembolsoDataTable" msprop:Generator_TableVarName="tableReembolso" msprop:Generator_TablePropName="Reembolso" msprop:Generator_RowDeletingName="ReembolsoRowDeleting" msprop:Generator_UserTableName="Reembolso" msprop:Generator_RowChangingName="ReembolsoRowChanging" msprop:Generator_RowEvHandlerName="ReembolsoRowChangeEventHandler" msprop:Generator_RowDeletedName="ReembolsoRowDeleted" msprop:Generator_RowEvArgName="ReembolsoRowChangeEvent" msprop:Generator_RowChangedName="ReembolsoRowChanged" msprop:Generator_RowClassName="ReembolsoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Numero_Empresa" msprop:Generator_ColumnVarNameInTable="columnNumero_Empresa" msprop:Generator_ColumnPropNameInRow="Numero_Empresa" msprop:Generator_ColumnPropNameInTable="Numero_EmpresaColumn" msprop:Generator_UserColumnName="Numero_Empresa" type="xs:int" minOccurs="0" />
+              <xs:element name="Numero_Comprobante" msprop:Generator_ColumnVarNameInTable="columnNumero_Comprobante" msprop:Generator_ColumnPropNameInRow="Numero_Comprobante" msprop:Generator_ColumnPropNameInTable="Numero_ComprobanteColumn" msprop:Generator_UserColumnName="Numero_Comprobante" type="xs:int" minOccurs="0" />
+              <xs:element name="Numero_Egreso" msprop:Generator_ColumnVarNameInTable="columnNumero_Egreso" msprop:Generator_ColumnPropNameInRow="Numero_Egreso" msprop:Generator_ColumnPropNameInTable="Numero_EgresoColumn" msprop:Generator_UserColumnName="Numero_Egreso" type="xs:int" minOccurs="0" />
+              <xs:element name="Folio_Comprobante" msprop:Generator_ColumnVarNameInTable="columnFolio_Comprobante" msprop:Generator_ColumnPropNameInRow="Folio_Comprobante" msprop:Generator_ColumnPropNameInTable="Folio_ComprobanteColumn" msprop:Generator_UserColumnName="Folio_Comprobante" type="xs:string" minOccurs="0" />
+              <xs:element name="Fecha_Comprobante" msprop:Generator_ColumnVarNameInTable="columnFecha_Comprobante" msprop:Generator_ColumnPropNameInRow="Fecha_Comprobante" msprop:Generator_ColumnPropNameInTable="Fecha_ComprobanteColumn" msprop:Generator_UserColumnName="Fecha_Comprobante" type="xs:string" minOccurs="0" />
+              <xs:element name="Nombre_Proveedor" msprop:Generator_ColumnVarNameInTable="columnNombre_Proveedor" msprop:Generator_ColumnPropNameInRow="Nombre_Proveedor" msprop:Generator_ColumnPropNameInTable="Nombre_ProveedorColumn" msprop:Generator_UserColumnName="Nombre_Proveedor" type="xs:string" minOccurs="0" />
+              <xs:element name="Importe_Comprobante" msprop:Generator_ColumnVarNameInTable="columnImporte_Comprobante" msprop:Generator_ColumnPropNameInRow="Importe_Comprobante" msprop:Generator_ColumnPropNameInTable="Importe_ComprobanteColumn" msprop:Generator_UserColumnName="Importe_Comprobante" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Iva_Comprobante" msprop:Generator_ColumnVarNameInTable="columnIva_Comprobante" msprop:Generator_ColumnPropNameInRow="Iva_Comprobante" msprop:Generator_ColumnPropNameInTable="Iva_ComprobanteColumn" msprop:Generator_UserColumnName="Iva_Comprobante" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Total_Comprobante" msprop:Generator_ColumnVarNameInTable="columnTotal_Comprobante" msprop:Generator_ColumnPropNameInRow="Total_Comprobante" msprop:Generator_ColumnPropNameInTable="Total_ComprobanteColumn" msprop:Generator_UserColumnName="Total_Comprobante" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Numero_Caja" msprop:Generator_ColumnVarNameInTable="columnNumero_Caja" msprop:Generator_ColumnPropNameInRow="Numero_Caja" msprop:Generator_ColumnPropNameInTable="Numero_CajaColumn" msprop:Generator_UserColumnName="Numero_Caja" type="xs:int" minOccurs="0" />
+              <xs:element name="Caja_Descripcion" msprop:Generator_ColumnVarNameInTable="columnCaja_Descripcion" msprop:Generator_ColumnPropNameInRow="Caja_Descripcion" msprop:Generator_ColumnPropNameInTable="Caja_DescripcionColumn" msprop:Generator_UserColumnName="Caja_Descripcion" type="xs:string" minOccurs="0" />
+              <xs:element name="Clas_Estatus" msprop:Generator_ColumnVarNameInTable="columnClas_Estatus" msprop:Generator_ColumnPropNameInRow="Clas_Estatus" msprop:Generator_ColumnPropNameInTable="Clas_EstatusColumn" msprop:Generator_UserColumnName="Clas_Estatus" type="xs:int" minOccurs="0" />
+              <xs:element name="Des_Estatus" msprop:Generator_ColumnVarNameInTable="columnDes_Estatus" msprop:Generator_ColumnPropNameInRow="Des_Estatus" msprop:Generator_ColumnPropNameInTable="Des_EstatusColumn" msprop:Generator_UserColumnName="Des_Estatus" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

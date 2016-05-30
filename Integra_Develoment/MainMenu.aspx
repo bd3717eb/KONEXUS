@@ -3,17 +3,17 @@
 <!DOCTYPE html>
 <html lang="es-mx">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="menu">
-    <meta name="author" content="BLNQL">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="menu" />
+    <meta name="author" content="steve.blanquel">
     <link rel="icon" href="Images/konexusico.png">
 
     <title>Konexus Dashboard</title>
     <!-- Bootstrap core CSS -->
-    <link href="Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="Content/album.css" rel="stylesheet">
+    <link href="Styles/bootstrap.min.css" rel="stylesheet" />
+    <link href="Styles/album.css" rel="stylesheet">
 
     <style type="text/css">
         #divresponse_info_company {
@@ -37,10 +37,10 @@
     </style>
 
     <!-- JS library core -->
-    <script defer src="Scripts/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script defer src="Scripts/jquery-2.2.3.min.js" type="text/javascript"></script>
     <script defer src="Scripts/bootstrap.js" type="text/javascript"></script>
     <script defer src="Scripts/jscoreknxs.js" type="text/javascript"></script>
-    <script defer src="Scripts/jsIntegra.js" type="text/javascript"></script>
+    <script src="Scripts/jsIntegra.js" type="text/javascript"></script>
 
     <script defer type="text/javascript">
 

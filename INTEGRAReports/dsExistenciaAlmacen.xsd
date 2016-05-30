@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsExistenciaAlmacen" targetNamespace="http://tempuri.org/dsExistenciaAlmacen.xsd" xmlns:mstns="http://tempuri.org/dsExistenciaAlmacen.xsd" xmlns="http://tempuri.org/dsExistenciaAlmacen.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsExistenciaAlmacen" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsExistenciaAlmacen" msprop:Generator_UserDSName="dsExistenciaAlmacen">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Empresa" msprop:Generator_TableClassName="EmpresaDataTable" msprop:Generator_TableVarName="tableEmpresa" msprop:Generator_TablePropName="Empresa" msprop:Generator_RowDeletingName="EmpresaRowDeleting" msprop:Generator_RowChangingName="EmpresaRowChanging" msprop:Generator_RowEvHandlerName="EmpresaRowChangeEventHandler" msprop:Generator_RowDeletedName="EmpresaRowDeleted" msprop:Generator_UserTableName="Empresa" msprop:Generator_RowChangedName="EmpresaRowChanged" msprop:Generator_RowEvArgName="EmpresaRowChangeEvent" msprop:Generator_RowClassName="EmpresaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Logo" msprop:Generator_ColumnVarNameInTable="columnLogo" msprop:Generator_ColumnPropNameInRow="Logo" msprop:Generator_ColumnPropNameInTable="LogoColumn" msprop:Generator_UserColumnName="Logo" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ExistenciasAlmacen" msprop:Generator_TableClassName="ExistenciasAlmacenDataTable" msprop:Generator_TableVarName="tableExistenciasAlmacen" msprop:Generator_TablePropName="ExistenciasAlmacen" msprop:Generator_RowDeletingName="ExistenciasAlmacenRowDeleting" msprop:Generator_RowChangingName="ExistenciasAlmacenRowChanging" msprop:Generator_RowEvHandlerName="ExistenciasAlmacenRowChangeEventHandler" msprop:Generator_RowDeletedName="ExistenciasAlmacenRowDeleted" msprop:Generator_UserTableName="ExistenciasAlmacen" msprop:Generator_RowChangedName="ExistenciasAlmacenRowChanged" msprop:Generator_RowEvArgName="ExistenciasAlmacenRowChangeEvent" msprop:Generator_RowClassName="ExistenciasAlmacenRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Clas_Des_Almacen" msprop:Generator_ColumnVarNameInTable="columnClas_Des_Almacen" msprop:Generator_ColumnPropNameInRow="Clas_Des_Almacen" msprop:Generator_ColumnPropNameInTable="Clas_Des_AlmacenColumn" msprop:Generator_UserColumnName="Clas_Des_Almacen" type="xs:string" minOccurs="0" />
+              <xs:element name="Clas_Cve_Concepto" msprop:Generator_ColumnVarNameInTable="columnClas_Cve_Concepto" msprop:Generator_ColumnPropNameInRow="Clas_Cve_Concepto" msprop:Generator_ColumnPropNameInTable="Clas_Cve_ConceptoColumn" msprop:Generator_UserColumnName="Clas_Cve_Concepto" type="xs:int" minOccurs="0" />
+              <xs:element name="Des_Concepto" msprop:Generator_ColumnVarNameInTable="columnDes_Concepto" msprop:Generator_ColumnPropNameInRow="Des_Concepto" msprop:Generator_ColumnPropNameInTable="Des_ConceptoColumn" msprop:Generator_UserColumnName="Des_Concepto" type="xs:string" minOccurs="0" />
+              <xs:element name="Caracteristicas" msprop:Generator_ColumnVarNameInTable="columnCaracteristicas" msprop:Generator_ColumnPropNameInRow="Caracteristicas" msprop:Generator_ColumnPropNameInTable="CaracteristicasColumn" msprop:Generator_UserColumnName="Caracteristicas" type="xs:string" minOccurs="0" />
+              <xs:element name="UM_Des" msprop:Generator_ColumnVarNameInTable="columnUM_Des" msprop:Generator_ColumnPropNameInRow="UM_Des" msprop:Generator_ColumnPropNameInTable="UM_DesColumn" msprop:Generator_UserColumnName="UM_Des" type="xs:string" minOccurs="0" />
+              <xs:element name="Total_Existencia" msprop:Generator_ColumnVarNameInTable="columnTotal_Existencia" msprop:Generator_ColumnPropNameInRow="Total_Existencia" msprop:Generator_ColumnPropNameInTable="Total_ExistenciaColumn" msprop:Generator_UserColumnName="Total_Existencia" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Costo_MN" msprop:Generator_ColumnVarNameInTable="columnCosto_MN" msprop:Generator_ColumnPropNameInRow="Costo_MN" msprop:Generator_ColumnPropNameInTable="Costo_MNColumn" msprop:Generator_UserColumnName="Costo_MN" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Total_MN" msprop:Generator_ColumnVarNameInTable="columnTotal_MN" msprop:Generator_ColumnPropNameInRow="Total_MN" msprop:Generator_ColumnPropNameInTable="Total_MNColumn" msprop:Generator_UserColumnName="Total_MN" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Clas_Cve_TProducto" msprop:Generator_ColumnVarNameInTable="columnClas_Cve_TProducto" msprop:Generator_ColumnPropNameInRow="Clas_Cve_TProducto" msprop:Generator_ColumnPropNameInTable="Clas_Cve_TProductoColumn" msprop:Generator_UserColumnName="Clas_Cve_TProducto" type="xs:int" minOccurs="0" />
+              <xs:element name="Clas_Des_TProducto" msprop:Generator_ColumnVarNameInTable="columnClas_Des_TProducto" msprop:Generator_ColumnPropNameInRow="Clas_Des_TProducto" msprop:Generator_ColumnPropNameInTable="Clas_Des_TProductoColumn" msprop:Generator_UserColumnName="Clas_Des_TProducto" type="xs:string" minOccurs="0" />
+              <xs:element name="Clas_Cve_Producto" msprop:Generator_ColumnVarNameInTable="columnClas_Cve_Producto" msprop:Generator_ColumnPropNameInRow="Clas_Cve_Producto" msprop:Generator_ColumnPropNameInTable="Clas_Cve_ProductoColumn" msprop:Generator_UserColumnName="Clas_Cve_Producto" type="xs:int" minOccurs="0" />
+              <xs:element name="Clas_Des_Producto" msprop:Generator_ColumnVarNameInTable="columnClas_Des_Producto" msprop:Generator_ColumnPropNameInRow="Clas_Des_Producto" msprop:Generator_ColumnPropNameInTable="Clas_Des_ProductoColumn" msprop:Generator_UserColumnName="Clas_Des_Producto" type="xs:string" minOccurs="0" />
+              <xs:element name="Clas_Cve_TConcepto" msprop:Generator_ColumnVarNameInTable="columnClas_Cve_TConcepto" msprop:Generator_ColumnPropNameInRow="Clas_Cve_TConcepto" msprop:Generator_ColumnPropNameInTable="Clas_Cve_TConceptoColumn" msprop:Generator_UserColumnName="Clas_Cve_TConcepto" type="xs:int" minOccurs="0" />
+              <xs:element name="Clas_Des_TConcepto" msprop:Generator_ColumnVarNameInTable="columnClas_Des_TConcepto" msprop:Generator_ColumnPropNameInRow="Clas_Des_TConcepto" msprop:Generator_ColumnPropNameInTable="Clas_Des_TConceptoColumn" msprop:Generator_UserColumnName="Clas_Des_TConcepto" type="xs:string" minOccurs="0" />
+              <xs:element name="Usuario" msprop:Generator_ColumnVarNameInTable="columnUsuario" msprop:Generator_ColumnPropNameInRow="Usuario" msprop:Generator_ColumnPropNameInTable="UsuarioColumn" msprop:Generator_UserColumnName="Usuario" type="xs:string" minOccurs="0" />
+              <xs:element name="Sucursal" msprop:Generator_ColumnVarNameInTable="columnSucursal" msprop:Generator_ColumnPropNameInRow="Sucursal" msprop:Generator_ColumnPropNameInTable="SucursalColumn" msprop:Generator_UserColumnName="Sucursal" type="xs:string" minOccurs="0" />
+              <xs:element name="Parte" msprop:Generator_ColumnVarNameInTable="columnParte" msprop:Generator_ColumnPropNameInRow="Parte" msprop:Generator_ColumnPropNameInTable="ParteColumn" msprop:Generator_UserColumnName="Parte" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

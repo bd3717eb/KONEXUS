@@ -1,18 +1,20 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Integra_Develoment.Default" %>
 
 <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="CFDI">
-    <meta name="author" content="steve">
-    <link rel="icon" href="Images/konexusico.png">
+    <meta name="description" content="CFDI" />
+    <meta name="author" content="eban" />
+    <link rel="icon" href="Images/konexusico.png" />
 
     <title>Konexus Inicia sesión</title>
-    <link href="Content/bootstrap.css" type="text/css" rel="stylesheet" />
+    <link href="Styles/bootstrap.css" type="text/css" rel="stylesheet" />
     <style>
         body {
             padding-top: 40px;
@@ -61,7 +63,7 @@
                 border-top-right-radius: 0;
             }
     </style>
-    <script type="text/javascript" src="Scripts/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="Scripts/jquery-2.2.3.min.js"></script>
     <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
 
     <script type="text/javascript">

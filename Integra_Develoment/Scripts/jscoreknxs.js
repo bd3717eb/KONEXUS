@@ -9,7 +9,7 @@ $(document).ready(function () {
     lfcredentials();
 
     $('.card img').click(function () {
-        debugger;
+        //debugger;
         var vIDModulo = $(this)[0].id
         var iModule = -1;
 

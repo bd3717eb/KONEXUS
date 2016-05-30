@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Devolucios" targetNamespace="http://tempuri.org/Devolucios.xsd" xmlns:mstns="http://tempuri.org/Devolucios.xsd" xmlns="http://tempuri.org/Devolucios.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Devolucios" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Devolucios" msprop:Generator_UserDSName="Devolucios">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DatoaNota" msprop:Generator_TableClassName="DatoaNotaDataTable" msprop:Generator_TableVarName="tableDatoaNota" msprop:Generator_TablePropName="DatoaNota" msprop:Generator_RowDeletingName="DatoaNotaRowDeleting" msprop:Generator_UserTableName="DatoaNota" msprop:Generator_RowChangingName="DatoaNotaRowChanging" msprop:Generator_RowEvHandlerName="DatoaNotaRowChangeEventHandler" msprop:Generator_RowDeletedName="DatoaNotaRowDeleted" msprop:Generator_RowEvArgName="DatoaNotaRowChangeEvent" msprop:Generator_RowChangedName="DatoaNotaRowChanged" msprop:Generator_RowClassName="DatoaNotaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Numero_Nota" msprop:Generator_ColumnVarNameInTable="columnNumero_Nota" msprop:Generator_ColumnPropNameInRow="Numero_Nota" msprop:Generator_ColumnPropNameInTable="Numero_NotaColumn" msprop:Generator_UserColumnName="Numero_Nota" type="xs:string" minOccurs="0" />
+              <xs:element name="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_UserColumnName="Fecha" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ClientTable" msprop:Generator_TableClassName="ClientTableDataTable" msprop:Generator_TableVarName="tableClientTable" msprop:Generator_TablePropName="ClientTable" msprop:Generator_RowDeletingName="ClientTableRowDeleting" msprop:Generator_UserTableName="ClientTable" msprop:Generator_RowChangingName="ClientTableRowChanging" msprop:Generator_RowEvHandlerName="ClientTableRowChangeEventHandler" msprop:Generator_RowDeletedName="ClientTableRowDeleted" msprop:Generator_RowEvArgName="ClientTableRowChangeEvent" msprop:Generator_RowChangedName="ClientTableRowChanged" msprop:Generator_RowClassName="ClientTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RFC" msprop:Generator_ColumnVarNameInTable="columnRFC" msprop:Generator_ColumnPropNameInRow="RFC" msprop:Generator_ColumnPropNameInTable="RFCColumn" msprop:Generator_UserColumnName="RFC" type="xs:string" minOccurs="0" />
+              <xs:element name="Direccion" msprop:Generator_ColumnVarNameInTable="columnDireccion" msprop:Generator_ColumnPropNameInRow="Direccion" msprop:Generator_ColumnPropNameInTable="DireccionColumn" msprop:Generator_UserColumnName="Direccion" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Empresa" msprop:Generator_TableClassName="EmpresaDataTable" msprop:Generator_TableVarName="tableEmpresa" msprop:Generator_TablePropName="Empresa" msprop:Generator_RowDeletingName="EmpresaRowDeleting" msprop:Generator_UserTableName="Empresa" msprop:Generator_RowChangingName="EmpresaRowChanging" msprop:Generator_RowEvHandlerName="EmpresaRowChangeEventHandler" msprop:Generator_RowDeletedName="EmpresaRowDeleted" msprop:Generator_RowEvArgName="EmpresaRowChangeEvent" msprop:Generator_RowChangedName="EmpresaRowChanged" msprop:Generator_RowClassName="EmpresaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Logo" msprop:Generator_ColumnVarNameInTable="columnLogo" msprop:Generator_ColumnPropNameInRow="Logo" msprop:Generator_ColumnPropNameInTable="LogoColumn" msprop:Generator_UserColumnName="Logo" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

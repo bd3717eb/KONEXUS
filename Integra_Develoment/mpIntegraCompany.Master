@@ -1,0 +1,97 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="mpIntegraCompany.master.cs" Inherits="Integra_Develoment.mpIntegraCompany" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <noscript>
+        Para utilizar las funcionalidades completas de este sitio es necesario tener JavaScript
+        habilitado. Aquí están las <a href="http://www.enable-javascript.com/es/" target="_blank">
+            instrucciones para habilitar JavaScript en tu navegador web</a>.
+    </noscript>
+    <title>KONEXUS</title>
+    <%--INICIO -ESTILOS NO MODIFICAR --%>
+    <link href="Styles/styleIC.css" type="text/css" rel="stylesheet" />
+    <link href="Styles/jquery-ui-1.10.4.min.css" type="text/css" rel="stylesheet" />
+    <link href="Styles/jquery.datetimepicker.css" type="text/css" rel="stylesheet" />
+
+    <%--FIN -ESTILOS NO MODIFICAR --%>
+    <%--INICIO - JAVASCRIPT NO MODIFICAR--%>
+    <%--<script src="Scripts/jquery-1.8.0.min.js" type="text/javascript" defer="defer"></script>--%>
+    <script src="Scripts/jquery-2.2.3.min.js" type="text/javascript" defer="defer"></script>
+    <asp:ContentPlaceHolder ID="mphead" runat="server">
+    </asp:ContentPlaceHolder>
+    <%--FIN - JAVASCRIPT NO MODIFICAR--%>
+</head>
+<body>
+    <%--Se utilizara para mostrar mensajes para simular un ajax  --%>
+    <div id="divProceso" class="cCargando" style="visibility: hidden">
+        <div id="divProcesoMsg" class="cCargandoImg">
+            <br />
+            EN PROCESO
+            <br />
+        </div>
+    </div>
+    <%--Se utilizara para mensajes tipo alert--%>
+    <div id="divMsg">
+        <asp:Label ID="lblMsgMaster" runat="server" Text="" CssClass="lblMensaje"></asp:Label>
+    </div>
+    <div id="divHeader">
+        <div id="divImg">
+            <asp:Label ID="lblImg" runat="server" Text="Label"></asp:Label>
+        </div>
+        <div id="divCompanytitle">
+            <asp:Label ID="lblCompanyTittle" runat="server" Text="Label"></asp:Label>
+        </div>
+        <div id="divUser">
+            <asp:Label ID="lblUser" runat="server" Text=""></asp:Label>
+            <br />
+            <table id="tablaUnidad" runat="server" style="right: 0px; position: absolute;">
+                <tr>
+                    <td>
+                        <asp:Label ID="lblTituloUnidad" runat="server" Text="Unidad de negocio: " CssClass="label">
+                        </asp:Label>
+                    </td>
+                    <td>
+                        <asp:Label ID="lblUnidadNegocio" runat="server" Text="" CssClass="label">
+                        </asp:Label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <%--<div id="divHeaderMenu" style="background-color: #961b27">--%>
+    <div id="divHeaderMenu" class="mainmenu">
+        <ul>
+            <asp:Label ID="lblMenuHead" runat="server" Text="Label"></asp:Label>
+        </ul>
+    </div>
+
+    <form id="frmIC" runat="server">
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+            <ContentTemplate>
+                <asp:ScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="true"
+                    EnableScriptLocalization="true">
+                    <Scripts>
+                        <asp:ScriptReference Path="~/Scripts/jquery-2.2.3.min.js" />
+                        <%--<asp:ScriptReference Path="~/Scripts/jquery.cookies.2.2.0.min.js" />
+                        <asp:ScriptReference Path="~/Scripts/scrollsaver.js" />--%>
+                        <asp:ScriptReference Path="~/Scripts/jsIntegra.js" />
+                        <%--<asp:ScriptReference Path="~/Scripts/Scripts.js" />--%>
+                    </Scripts>
+                </asp:ScriptManager>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+        <asp:HiddenField ID="HdnTablasMensajes" runat="server" />
+        <asp:HiddenField ID="HdnTiempo" runat="server" />
+        <div id="divMain">
+            <asp:ContentPlaceHolder ID="CPHIntegraCompany" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <div id="divFooter">
+        <label>
+            Integra ERP® 2016 México D.F. │ Aviso de Privacidad │ Alianzas Contáctanos: info@integrasoftware.com.mx
+        </label>
+    </div>
+</body>
+</html>
