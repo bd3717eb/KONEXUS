@@ -268,7 +268,6 @@ namespace IntegraBussines
 
 
             dt = context.ExecuteProcedure("[sp_SalidaAlmacen_Busca_Usuario]", true).Copy();
-
             return dt;
         }
 
