@@ -225,7 +225,7 @@ namespace INTEGRAReports {
         private void InitClass() {
             this.DataSetName = "dsAuxiliarContable";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/dsAuxiliarContable.xsd";
+            this.Namespace = "http://www.integrasoftware.com.mxdsAuxiliarContable.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableEmpresa = new EmpresaDataTable();

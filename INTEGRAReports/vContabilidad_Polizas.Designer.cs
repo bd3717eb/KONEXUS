@@ -225,7 +225,7 @@ namespace INTEGRAReports {
         private void InitClass() {
             this.DataSetName = "vContabilidad_Polizas";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/vContabilidad_Polizas.xsd";
+            this.Namespace = "http://www.integrasoftware.com.mxvContabilidad_Polizas.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableEmpresa = new EmpresaDataTable();

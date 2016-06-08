@@ -2,6 +2,8 @@
 // VARIABLES
 
 @font-page: Verdana, Geneva, sans-serif;
+@font-size-controls: 10px;
+@font-size-label-control: 11px;
 @backgroundcolorwhite: #ffffff;
 @backgroundcolorlighwhite: #f1f1f1;
 @backgroundcolorgray: #5b5b5b;
@@ -10,7 +12,9 @@
 @backgroundRED: #a61b26;
 @backgroundLIGHTGRAY: #f1f1f1;
 @backgroundLeftMenu: #e7e7e7;
-
+@backgroundFooter: #3c3c3c;
+@backgroundGridHeader: #c42c39;
+@backgroundhighlights: #e4e6c2;
 // ================================================================================
 // VARIABLES LETTER
 
@@ -30,6 +34,23 @@
     text-decoration: none;
     cursor: pointer;
 }
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
 
 // ================================================================
 // CSS MASTER PAGE
@@ -138,7 +159,7 @@ body {
 }
 
 #divCompanytitle {
-    font-size: 10px;
+    font-size: @font-size-controls;
     font-weight: 100;
     font-family: @font-page;
     display: inline-block;
@@ -151,7 +172,7 @@ body {
     height: 82px;
     float: right;
     width: 33%;
-    font-size: 10px;
+    font-size: @font-size-controls;
     font-weight: 100;
     font-family: @font-page;
     text-align: right;
@@ -165,11 +186,45 @@ body {
     bottom: 0; /**top: 0px;*/
     width: 100%;
     height: 20px; /*color: #333;*/
-    background-color: @borderControls;
+    background-color: @backgroundFooter;
     z-index: 100;
     text-align: center;
     color: @backgroundcolorlighwhite;
-    font-size: 10px;
+    font-family: @font-page;
+    font-size: calc(@font-size-controls - 1px);
+}
+
+.fieldset {
+    width: 70%;
+    border: @backgroundcolorlighwhite 3px solid;
+}
+
+/*****************Facturacion **********************/
+
+.collapsePanelHeader {
+    width: 100%;
+    font-weight: bold;
+    border-color: @borderControls;
+    background: @backgroundcolorlighwhite;
+    font-family: @font-page;
+    font-size: @font-size-label-control;
+    color: @letterBLACK;
+    .rule_linksAccion;
+}
+
+
+//==========================================================================
+// MODAL
+// ==========================================================================
+
+.modalfooter {
+    padding-top: 8px;
+    padding-bottom: 10px;
+    height: 10px;
+    text-align: center;
+    background-color: @borderControls;
+    margin-bottom: 0px;
+    .rule_linksAccion;
 }
 // ==========================================================================
 // MENU RIGHT
@@ -184,17 +239,29 @@ body {
     .rule_linksAccion;
 }
 
-// ==========================================================================
+#divMenuRight {
+    right: 0;
+    background-color: @backgroundLeftMenu;
+    position: absolute;
+    width: 275px;
+    height: 22px;
+    text-align: left;
+    .rule_linksAccion;
+}
+
+// ============================================================================================================================
 // HTML CONTROLS
-// ==========================================================================
+// ============================================================================================================================
 .rule_border {
     border-color: @borderControls;
     background-color: @backControls;
 }
-
+//
+//
+//
 .DropDown {
     font-family: @font-page;
-    font-size: 10px;
+    font-size: @font-size-controls;
     width: 120px;
     .rule_border;
 }
@@ -204,23 +271,227 @@ body {
 }
 
 // ==========================================================================
+// TextBox
+// ==========================================================================
+.TextBoxEstilo {
+    background-color: @backControls;
+    font-size: @font-size-controls;
+    font-family: @font-page;
+}
+
+input[type=text] {
+    .TextBoxEstilo;
+}
+
+.TextBoxEstiloImporte {
+    width: 200px;
+    background-color: @backControls;
+    font-size: @font-size-controls;
+    font-family: @font-page;
+}
+
+.TextBoxEstiloCambio {
+    width: 200px;
+    background-color: @backControls;
+    font-size: @font-size-controls;
+    font-family: @font-page;
+}
+
+// ==========================================================================
+// Label
+// ==========================================================================
+
+.label {
+    font-family: @font-page;
+    font-size: @font-size-label-control;
+}
+
+.label_title {
+    font-family: @font-page;
+    font-size: @font-size-label-control;
+    font-weight: bold;
+}
+
+.labelTicket {
+    font-family: @font-page;
+    font-size: @font-size-controls;
+}
+
+.labelAsterisco {
+    font-family: @font-page;
+    font-size: calc(@font-size-label-control + 1px);
+}
+
+.validation_label {
+    font-family: @font-page;
+    font-size: @font-size-controls;
+    color: @letterRED;
+    font-weight: bold;
+}
+
+
+.labels {
+    width: 107px;
+    text-align: left;
+    font-family: @font-page;
+    font-size: @font-size-label-control;
+    font-weight: bold;
+    /*background-color: #467c9e;*/
+    /*color: White;*/
+    margin-top: 3%;
+    margin-left: 14px;
+}
+
+.LabelStyleImport {
+    font-family: @font-page;
+    width: 1px;
+    font-size: 1px;
+    color: @letterRED;
+}
+// ==========================================================================
+// GridView
+// ==========================================================================
+.rule_grid {
+    font-family: @font-page;
+    font-size: @font-size-controls;
+    background-color: @backgroundLIGHTGRAY;
+}
+
+.GridViewHeaderStyle {
+    font-family: @font-page;
+    color: @letterWHITE;
+    background-color: @backgroundRED;
+}
+
+.GridViewRowStyle {
+    .rule_grid;
+}
+
+.GridViewFooterStyle {
+    .rule_grid;
+}
+
+.GridViewAlternatingRowStyle {
+    .rule_grid;
+}
+
+GridViewSelectedRowStyle {
+    .rule_grid;
+    background-color: @backgroundhighlights;
+    font-weight: bolder;
+}
+
+.NoMostrar {
+    display: none;
+}
+
+
+// ==========================================================================
+// ==========================================================================
 // AJAX CONTROL TOOLKIT
 // ==========================================================================
 .autocomplete_highlightedListItem {
     font-family: @font-page;
-    font-size: 10px;
-    background-color: @backControls;
+    font-size: @font-size-controls;
+    background-color: @hoverControls;
     color: @letterBLACK;
     padding: 1px;
+    .rule_linksAccion;
 }
 
 .autocomplete_listItem {
     border: 1px;
     border-style: dotted;
     font-family: @font-page;
-    font-size: 10px;
+    font-size: @font-size-controls;
     background-color: @backControls;
     color: @letterBLACK;
     padding: 1px;
     z-index: 2000;
+}
+// ==========================================================================
+// CalendarExtender
+// ==========================================================================
+.rule_calendar {
+    font-family: @font-page;
+    font-size: @font-size-controls;
+    background-color: @backgroundLIGHTGRAY;
+}
+
+.cal_Theme1 .ajax__calendar_container {
+    font-family: @font-page;
+    font-size: @font-size-controls;
+    background-color: #e2e2e2;
+    border: solid 1px #cccccc;
+}
+
+.cal_Theme1 .ajax__calendar_header {
+    background-color: #ffffff;
+    margin-bottom: 4px;
+}
+
+.cal_Theme1 .ajax__calendar_title, .cal_Theme1 .ajax__calendar_next, .cal_Theme1 .ajax__calendar_prev {
+    color: #004080;
+    padding-top: 3px;
+}
+
+.cal_Theme1 .ajax__calendar_body {
+    background-color: #e9e9e9;
+    border: solid 1px #cccccc;
+}
+
+.cal_Theme1 .ajax__calendar_dayname {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 4px;
+    margin-top: 2px;
+}
+
+.cal_Theme1 .ajax__calendar_day {
+    text-align: center;
+}
+
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_day, .cal_Theme1 .ajax__calendar_hover .ajax__calendar_month, .cal_Theme1 .ajax__calendar_hover .ajax__calendar_year, .cal_Theme1 .ajax__calendar_active {
+    color: #004080;
+    font-weight: bold;
+    background-color: #ffffff;
+}
+
+.cal_Theme1 .ajax__calendar_today {
+    font-weight: bold;
+}
+
+.cal_Theme1 .ajax__calendar_other, .cal_Theme1 .ajax__calendar_hover .ajax__calendar_today, .cal_Theme1 .ajax__calendar_hover .ajax__calendar_title {
+    color: #bbbbbb;
+}
+
+
+//  ==========================================================================
+// FacturacionLibreMorales
+// FacturacionLibreFisicas
+// ==========================================================================
+.observacionesInvoice {
+    width: 50%;
+    float: left;
+    font-family: @font-page;
+    font-size: @font-size-label-control;
+    margin-top: 1px;
+    margin-left: 2px;
+    margin-right: 15px;
+}
+
+.TablegridInvoice1 {
+    padding-left: 5px;
+    padding-top: 2px;
+    width: 97%;
+    font-family: @font-page;
+    color: @letterWHITE;
+}
+
+.btnagregarpartida {
+    text-align: left;
+    padding: 5px 12px;
+    margin: 0px 1px;
+    font-size: calc(@font-size-label-control + 5px);
+    .rule_linksAccion;
 }

@@ -18,12 +18,22 @@ $(document).ready(function () {
     //debugger;
     // posicionamos el scroll de la capa en la última posición guardada en la cookie
     // si no hubiese en la posición 0
-    $("#scrollagregar").scrollTop($.cookies.get("scroll") || 0);
+    try {
+        $("#scrollagregar").scrollTop($.cookies.get("scroll") || 0);
+
+    } catch (e) {
+        console.log(e.message);
+    }
 });
 // ejecución del código antes de salir de la página
 window.onbeforeunload = function () {
     // almacenamos en la cookie la posición del scroll de la capa de listado
-    $.cookies.set('scroll', $("#scrollagregar").scrollTop());
+    try {
+        $.cookies.set('scroll', $("#scrollagregar").scrollTop());
+    } catch (e) {
+        console.log(e.message);
+    }
+    
 }
 function CerrarPopup() {
     //debugger;
@@ -183,7 +193,7 @@ function gfProcesoEscondeRefresh2() {
 
 }
 function gfAbrePdfVentaPagada() {
-  //  debugger
+    //  debugger
     setInterval("openpdf()", 7000);
 
 }
@@ -215,13 +225,10 @@ function openpdf() {
 
     window.open(docpdf, "ventana1", "width=500,height=600,scrollbars=YES,toolbar=no,location=0, directories=0, status=0")
 
-    __doPostBack('CPHIntegraCompany_lnkNuevaVenta', '')
+    __doPostBack('ctl00$CPHIntegraCompany$linkLimpiar', '')
 }
 
-function limpiar() {
 
-    __doPostBack('linkTest', '')
-}
 
 
 function CerrarCancelaPago() {
@@ -281,7 +288,7 @@ function redir(parametro) {
     }
 
     document.getElementById(parametro.id).select();
-   
+
 }
 
 function redirb(parametro) {
@@ -296,7 +303,7 @@ function redirb(parametro) {
         }
     }
     else {
-       
+
         document.getElementById(parametro.id).value = valor;
     }
 
@@ -378,12 +385,12 @@ function redirbcambio(parametro) {
 
 }
 function gfProbando() {
- 
-   //debugger;
+
+    //debugger;
     //    alert('entra');
-  
+
     __doPostBack('ctl00$CPHIntegraCompany$linkHolamundo', '');
-    
+
 }
 function gfProbando2(parametro) {
     alert('entra');

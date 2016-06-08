@@ -183,6 +183,7 @@ namespace Integra_Develoment
             context.Parametros.Add(new SqlParameter("TipoProducto", itype));
 
             dt = context.ExecuteProcedure("sp_Obtener_Productos2", true).Copy();
+            dt.Rows.Cast<System.Data.DataRow>().Take(15);
             return dt;
         }
         public static DataTable GetConcepts(int icompany, int imarketingproduct, int iproduct, int icliente, int ito)
@@ -318,8 +319,8 @@ namespace Integra_Develoment
 
         }
 
-     
-        
+
+
         public static int gfInsertaFactura(int iEmpresa, string sCadena, int iPersona)
         {
             int iRespuesta = 0;
@@ -387,8 +388,8 @@ namespace Integra_Develoment
                 context.Parametros.Add(new SqlParameter("@Num_Periodo", iNumeroPeriodo));
                 context.Parametros.Add(new SqlParameter("@Clas_Periodo", iClasPeriodo));
                 context.Parametros.Add(new SqlParameter("@Fecha", Fecha));
-             
-                
+
+
                 context.ExecuteProcedure("sp_cotizacion_detalle_pagos", true).Copy();
             }
             catch
@@ -417,7 +418,7 @@ namespace Integra_Develoment
 
 
 
-  
+
 
     }
 }

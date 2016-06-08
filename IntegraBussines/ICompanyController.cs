@@ -251,13 +251,13 @@ namespace IntegraBussines
                     ruta = ruta.Replace(@"\", "/");
 
                     if (System.IO.File.Exists(rutaRaiz))
-                        return @"<a href='../MainMenuV2.html'> <img id='idIMG' src='" + ruta + "' alt='img' height='81' width='178' /></a>";
+                        return @"<a href='../MainMenu.aspx'> <img id='idIMG' src='" + ruta + "' alt='img' height='81' width='178' /></a>";
                     else
-                        return @"<a href='../MainMenuV2.html'><img id='idIMG' src='../Images/logo.png' alt='img' height='81' width='178' /> </a>";
+                        return @"<a href='../MainMenu.aspx'><img id='idIMG' src='../Images/logo.png' alt='img' height='81' width='178' /> </a>";
                 }
                 else
                 {
-                    return @"<a href='../MainMenuV2.html'><img id='idIMG' src='../Images/logo.png' alt='img' height='81' width='178' /> </a>";
+                    return @"<a href='../MainMenu.aspx'><img id='idIMG' src='../Images/logo.png' alt='img' height='81' width='178' /> </a>";
                 }
             }
             catch

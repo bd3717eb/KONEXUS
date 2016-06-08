@@ -225,7 +225,7 @@ namespace INTEGRAReports {
         private void InitClass() {
             this.DataSetName = "dsSolicitudReembolso";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/dsSolicitudReembolso.xsd";
+            this.Namespace = "http://www.integrasoftware.com.mxdsSolicitudReembolso.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableSolicitudReembolsoRpt = new SolicitudReembolsoRptDataTable();

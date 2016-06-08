@@ -201,7 +201,7 @@ namespace INTEGRAReports {
         private void InitClass() {
             this.DataSetName = "dsEstadoCuenta";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/dsEstadoCuenta.xsd";
+            this.Namespace = "http://www.integrasoftware.com.mxdsEstadoCuenta.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableEstadoCuentaReporte = new EstadoCuentaReporteDataTable();

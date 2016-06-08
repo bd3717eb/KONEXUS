@@ -3,6 +3,18 @@
   text-decoration: none;
   cursor: pointer;
 }
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:active {
+  text-decoration: underline;
+}
 body {
   margin: 0;
   padding: 0px;
@@ -154,13 +166,50 @@ body {
   height: 20px;
   /*color: #333;*/
 
-  background-color: #556370;
+  background-color: #3c3c3c;
   z-index: 100;
   text-align: center;
   color: #f1f1f1;
-  font-size: 10px;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: calc(9px);
+}
+.fieldset {
+  width: 70%;
+  border: #f1f1f1 3px solid;
+}
+/*****************Facturacion **********************/
+.collapsePanelHeader {
+  width: 100%;
+  font-weight: bold;
+  border-color: #556370;
+  background: #f1f1f1;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 11px;
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modalfooter {
+  padding-top: 8px;
+  padding-bottom: 10px;
+  height: 10px;
+  text-align: center;
+  background-color: #556370;
+  margin-bottom: 0px;
+  text-decoration: none;
+  cursor: pointer;
 }
 #divMenuRightVentas {
+  right: 0;
+  background-color: #e7e7e7;
+  position: absolute;
+  width: 275px;
+  height: 22px;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+#divMenuRight {
   right: 0;
   background-color: #e7e7e7;
   position: absolute;
@@ -184,12 +233,113 @@ body {
 .DropDown:hover {
   background-color: #f5f5d1;
 }
+.TextBoxEstilo {
+  background-color: #f5f5dc;
+  font-size: 10px;
+  font-family: Verdana, Geneva, sans-serif;
+}
+input[type=text] {
+  background-color: #f5f5dc;
+  font-size: 10px;
+  font-family: Verdana, Geneva, sans-serif;
+}
+.TextBoxEstiloImporte {
+  width: 200px;
+  background-color: #f5f5dc;
+  font-size: 10px;
+  font-family: Verdana, Geneva, sans-serif;
+}
+.TextBoxEstiloCambio {
+  width: 200px;
+  background-color: #f5f5dc;
+  font-size: 10px;
+  font-family: Verdana, Geneva, sans-serif;
+}
+.label {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 11px;
+}
+.label_title {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+}
+.labelTicket {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 10px;
+}
+.labelAsterisco {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: calc(12px);
+}
+.validation_label {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 10px;
+  color: #ff0000;
+  font-weight: bold;
+}
+.labels {
+  width: 107px;
+  text-align: left;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  /*background-color: #467c9e;*/
+
+  /*color: White;*/
+
+  margin-top: 3%;
+  margin-left: 14px;
+}
+.LabelStyleImport {
+  font-family: Verdana, Geneva, sans-serif;
+  width: 1px;
+  font-size: 1px;
+  color: #ff0000;
+}
+.rule_grid {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 10px;
+  background-color: #f1f1f1;
+}
+.GridViewHeaderStyle {
+  font-family: Verdana, Geneva, sans-serif;
+  color: #ffffff;
+  background-color: #a61b26;
+}
+.GridViewRowStyle {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 10px;
+  background-color: #f1f1f1;
+}
+.GridViewFooterStyle {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 10px;
+  background-color: #f1f1f1;
+}
+.GridViewAlternatingRowStyle {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 10px;
+  background-color: #f1f1f1;
+}
+GridViewSelectedRowStyle {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 10px;
+  background-color: #f1f1f1;
+  background-color: #e4e6c2;
+  font-weight: bolder;
+}
+.NoMostrar {
+  display: none;
+}
 .autocomplete_highlightedListItem {
   font-family: Verdana, Geneva, sans-serif;
   font-size: 10px;
-  background-color: #f5f5dc;
+  background-color: #f5f5d1;
   color: #000000;
   padding: 1px;
+  text-decoration: none;
+  cursor: pointer;
 }
 .autocomplete_listItem {
   border: 1px;
@@ -200,4 +350,78 @@ body {
   color: #000000;
   padding: 1px;
   z-index: 2000;
+}
+.rule_calendar {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 10px;
+  background-color: #f1f1f1;
+}
+.cal_Theme1 .ajax__calendar_container {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 10px;
+  background-color: #e2e2e2;
+  border: solid 1px #cccccc;
+}
+.cal_Theme1 .ajax__calendar_header {
+  background-color: #ffffff;
+  margin-bottom: 4px;
+}
+.cal_Theme1 .ajax__calendar_title,
+.cal_Theme1 .ajax__calendar_next,
+.cal_Theme1 .ajax__calendar_prev {
+  color: #004080;
+  padding-top: 3px;
+}
+.cal_Theme1 .ajax__calendar_body {
+  background-color: #e9e9e9;
+  border: solid 1px #cccccc;
+}
+.cal_Theme1 .ajax__calendar_dayname {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 4px;
+  margin-top: 2px;
+}
+.cal_Theme1 .ajax__calendar_day {
+  text-align: center;
+}
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_day,
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_month,
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_year,
+.cal_Theme1 .ajax__calendar_active {
+  color: #004080;
+  font-weight: bold;
+  background-color: #ffffff;
+}
+.cal_Theme1 .ajax__calendar_today {
+  font-weight: bold;
+}
+.cal_Theme1 .ajax__calendar_other,
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_today,
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_title {
+  color: #bbbbbb;
+}
+.observacionesInvoice {
+  width: 50%;
+  float: left;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 11px;
+  margin-top: 1px;
+  margin-left: 2px;
+  margin-right: 15px;
+}
+.TablegridInvoice1 {
+  padding-left: 5px;
+  padding-top: 2px;
+  width: 97%;
+  font-family: Verdana, Geneva, sans-serif;
+  color: #ffffff;
+}
+.btnagregarpartida {
+  text-align: left;
+  padding: 5px 12px;
+  margin: 0px 1px;
+  font-size: calc(16px);
+  text-decoration: none;
+  cursor: pointer;
 }

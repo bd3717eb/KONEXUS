@@ -225,7 +225,7 @@ namespace INTEGRAReports {
         private void InitClass() {
             this.DataSetName = "dsCaja";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/dsCaja.xsd";
+            this.Namespace = "http://www.integrasoftware.com.mxdsCaja.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableCaja = new CajaDataTable();

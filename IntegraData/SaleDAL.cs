@@ -47,7 +47,7 @@ namespace IntegraData
                 new SqlParameter("Clas_Sucursal", iCOffice),
                 new SqlParameter("Entrega_Directa", iDirectDelivery),
                 new SqlParameter("Numero_Cotiza", iCNumber.HasValue ? (object)iCNumber.Value : DBNull.Value),
-                new SqlParameter("Clas_Almacen_Cot", iCStore.HasValue ? (object)iCStore.Value : DBNull.Value),               
+                new SqlParameter("Clas_Almacen_Cot", iCStore.HasValue ? (object)iCStore.Value : DBNull.Value),
             };
 
             if (parameters != null)
@@ -68,10 +68,10 @@ namespace IntegraData
         {
 
             SqlParameter[] parameters = new SqlParameter[]
-		    {                
-			    new SqlParameter("companynumber", icompany),
-			    new SqlParameter("tipo", stype),
-		    };
+            {
+                new SqlParameter("companynumber", icompany),
+                new SqlParameter("tipo", stype),
+            };
             return sqlDBHelper.ExecuteNonQuerySELECTStatement("sp_Venta_ObtieneTiposDePago_v1", CommandType.StoredProcedure, parameters);
         }
 
@@ -80,11 +80,11 @@ namespace IntegraData
         {
 
             SqlParameter[] parameters = new SqlParameter[]
-		    {      
+            {
                 new SqlParameter("description", sdescription),
-			    new SqlParameter("family", ifamily),
-			    new SqlParameter("father", ifather),
-		    };
+                new SqlParameter("family", ifamily),
+                new SqlParameter("father", ifather),
+            };
             return sqlDBHelper.ExecuteNonQuerySELECTStatement("sp_Venta_ObtieneNumeroDeEstatusDeDescripcion_v1", CommandType.StoredProcedure, parameters);
         }
 
@@ -93,10 +93,10 @@ namespace IntegraData
         {
 
             SqlParameter[] parameters = new SqlParameter[]
-		    {      
+            {
                 new SqlParameter("companynumber", icompany),
                 new SqlParameter("salenumber", isalenumber),
-		    };
+            };
             return sqlDBHelper.ExecuteNonQuerySELECTStatement("sp_Venta_ObtieneEstatusDelNumeroDeVenta_v1", CommandType.StoredProcedure, parameters);
         }
 
@@ -105,10 +105,10 @@ namespace IntegraData
         {
 
             SqlParameter[] parameters = new SqlParameter[]
-		    {                
-			    new SqlParameter("companynumber", icompany),
+            {
+                new SqlParameter("companynumber", icompany),
                 new SqlParameter("product", iproduct),
-		    };
+            };
             return sqlDBHelper.ExecuteNonQuerySELECTStatement("sp_Venta_EsProducto_v1", CommandType.StoredProcedure, parameters);
         }
 
@@ -121,13 +121,13 @@ namespace IntegraData
         {
 
             SqlParameter[] parameters = new SqlParameter[]
-		    {                
-			    new SqlParameter("companynumber", icompany),
+            {
+                new SqlParameter("companynumber", icompany),
                 new SqlParameter("store", istore),
                 new SqlParameter("product", iproduct),
                 new SqlParameter("concept", iconcept),
                 new SqlParameter("family", ifamily),
-		    };
+            };
             return sqlDBHelper.ExecuteNonQuerySELECTStatement("sp_Venta_ObtieneStockDeLaTienda_v1", CommandType.StoredProcedure, parameters);
         }
 
@@ -165,11 +165,11 @@ namespace IntegraData
         {
 
             SqlParameter[] parameters = new SqlParameter[]
-		    {                
-			    new SqlParameter("companynumber", icompany),                
+            {
+                new SqlParameter("companynumber", icompany),
                 new SqlParameter("childnumber", ichildnumber),
                 new SqlParameter("family", ifamily),
-		    };
+            };
             return sqlDBHelper.ExecuteNonQuerySELECTStatement("sp_Venta_ObtieneNumeroDePadrePorNumeroDeHijo_v1", CommandType.StoredProcedure, parameters);
         }
 
@@ -179,7 +179,7 @@ namespace IntegraData
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("comando", scadena),
-              
+
             };
 
             return sqlDBHelper.ExecuteNonQuery("Sp_ImpresionCFD", CommandType.StoredProcedure, parameters);
@@ -188,7 +188,7 @@ namespace IntegraData
 
         public int SpFacturaLibre(int iMoviment, int iCompany, int iNumber, int iCustomer, DateTime Date, int iDocumento, int iSerie, int iNumeroDocto,
                                  string sReference, int iCurrency, decimal TypeChange, int iconceptnumber, int iuser, int icredit, string sobservaciones,
-                                 int? inotacargo, int? iclaspagodato, string SPayData, int Clas_Sucursal,decimal? dSub, decimal? dIva, decimal? dTotal)
+                                 int? inotacargo, int? iclaspagodato, string SPayData, int Clas_Sucursal, decimal? dSub, decimal? dIva, decimal? dTotal, string sCondicionPago)
         {
 
             SqlParameter[] parameters = new SqlParameter[]
@@ -202,7 +202,7 @@ namespace IntegraData
                 new SqlParameter("Tipo_Docto", iDocumento),
                 new SqlParameter("Serie", iSerie),
                 new SqlParameter("Numero_Docto", iNumeroDocto),
-                new SqlParameter("Referencia", sReference),    
+                new SqlParameter("Referencia", sReference),
                 new SqlParameter("Clas_Moneda", iCurrency),
                 new SqlParameter("TC", TypeChange),
                 new SqlParameter("Concepto_Factura", iconceptnumber),
@@ -219,6 +219,7 @@ namespace IntegraData
                 new SqlParameter("Sub", dSub.HasValue ? (object)dSub.Value : DBNull.Value),
                 new SqlParameter("Iva", dIva.HasValue ? (object)dIva.Value : DBNull.Value),
                 new SqlParameter("Total", dTotal.HasValue ? (object)dTotal.Value : DBNull.Value),
+                new SqlParameter("Condicion_Pago", sCondicionPago),
 
             };
 
@@ -259,9 +260,9 @@ namespace IntegraData
         }
 
         public bool SaveSaleDetailFacturaLibre(int iMoviment, int iCompany, int iSaleNumber, int iNumber, int TProduct, int Product, int TConcept, int Concept, string sCharacteristics,
-                                             int iMeasuringUnit, decimal dQuantity, decimal Price, double iIVA, int iClasIVA, int MeasuringUnitFam, DateTime DeliveryDate, 
+                                             int iMeasuringUnit, decimal dQuantity, decimal Price, double iIVA, int iClasIVA, int MeasuringUnitFam, DateTime DeliveryDate,
                                              int? NotaCargo, decimal? TotalCargo, decimal? dTotalPartida)
-       
+
         {
             SqlParameter[] parameters = new SqlParameter[]
             {
@@ -294,9 +295,9 @@ namespace IntegraData
         public DataTable GetDatosCorreoCliente(int icliente)
         {
             SqlParameter[] parameters = new SqlParameter[]
-		    {                
+            {
                new SqlParameter("cliente", icliente),
-		    };
+            };
             return sqlDBHelper.ExecuteNonQuerySELECTStatement("sp_Venta_ObtieneDatosDeCorreo", CommandType.StoredProcedure, parameters);
         }
 
@@ -305,7 +306,7 @@ namespace IntegraData
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("comando", scadena),
-              
+
             };
 
             return sqlDBHelper.ExecuteNonQuery("Sp_CopiadoArchivosCFDI", CommandType.StoredProcedure, parameters);

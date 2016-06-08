@@ -9,7 +9,7 @@ namespace Integra_Develoment
     /// <summary>
     /// Summary description for ClientAutocompleteWebService
     /// </summary>
-    [WebService(Namespace = "http://tempuri.org/")]
+    [WebService(Namespace = "http://www.integrasoftware.com.mx")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
     // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
@@ -184,6 +184,7 @@ namespace Integra_Develoment
 
             return txtItems.ToArray();
         }
+
 
         [WebMethod(EnableSession = true)]
         [System.Web.Script.Services.ScriptMethod()]

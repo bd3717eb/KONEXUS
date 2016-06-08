@@ -249,7 +249,7 @@ namespace INTEGRAReports {
         private void InitClass() {
             this.DataSetName = "MultiplePayReport";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/MultiplePayReport.xsd";
+            this.Namespace = "http://www.integrasoftware.com.mxMultiplePayReport.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tablePaymentsDetails = new PaymentsDetailsDataTable();

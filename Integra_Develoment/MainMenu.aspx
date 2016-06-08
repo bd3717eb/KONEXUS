@@ -89,23 +89,23 @@
                         switch (idmodule) {
                             case 1:
                                 $("body").hide(100).delay(500);
-                                url = url.replace('MainMenuV2.html', '/Ventas/Ventas.aspx')
+                                url = url.replace('MainMenu.aspx', '/Ventas/Ventas.aspx')
                                 window.location.href = url.toString();
                                 break;
                             case 5:
                                 $("body").hide(100).delay(500);
-                                url = url.replace('MainMenuV2.html', '/Contabilidad/ReportePoliza.aspx')
+                                url = url.replace('MainMenu.aspx', '/Contabilidad/ReportePoliza.aspx')
                                 window.location.href = url.toString();
                                 break;
                             case 7:
                                 debugger;
                                 $("body").hide(100).delay(500);
-                                url = url.replace('MainMenuV2.html', '/Tesoreria/PagarCxP_CxC_Archivo.aspx')
+                                url = url.replace('MainMenu.aspx', '/Tesoreria/PagarCxP_CxC_Archivo.aspx')
                                 window.location.href = url.toString();
                                 break;
                             case 8:
                                 $("body").hide(100).delay(500);
-                                url = url.replace('MainMenuV2.html', '/Almacen/AlmacenEntradas.aspx')
+                                url = url.replace('MainMenu.aspx', '/Almacen/AlmacenEntradas.aspx')
                                 window.location.href = url.toString();
                                 break;
 

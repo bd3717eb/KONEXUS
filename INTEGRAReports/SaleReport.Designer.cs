@@ -249,7 +249,7 @@ namespace INTEGRAReports {
         private void InitClass() {
             this.DataSetName = "SaleReport";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/SaleReport.xsd";
+            this.Namespace = "http://www.integrasoftware.com.mxSaleReport.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableEmpresa = new EmpresaDataTable();

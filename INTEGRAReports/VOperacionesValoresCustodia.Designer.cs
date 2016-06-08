@@ -297,7 +297,7 @@ namespace INTEGRAReports {
         private void InitClass() {
             this.DataSetName = "VOperacionesValoresCustodia";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/VOperacionesValoresCustodia.xsd";
+            this.Namespace = "http://www.integrasoftware.com.mxVOperacionesValoresCustodia.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableDatos_Encabezado = new Datos_EncabezadoDataTable();

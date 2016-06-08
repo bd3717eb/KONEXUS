@@ -273,7 +273,7 @@ namespace INTEGRAReports {
         private void InitClass() {
             this.DataSetName = "CreditNoteReport";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/CreditNoteReport.xsd";
+            this.Namespace = "http://www.integrasoftware.com.mxCreditNoteReport.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableDatosNota = new DatosNotaDataTable();

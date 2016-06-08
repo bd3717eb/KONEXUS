@@ -38,7 +38,7 @@ $(document).ready(function () {
                 break;
             case 'imgCompras':
                 window.open("http://189.206.75.142/Citrix/XenApp/auth/login.aspx");
-                window.location.href = "MainMenuV2.html";
+                window.location.href = "MainMenu.aspx";
                 break;
             default:
                 alert(vIDModulo);

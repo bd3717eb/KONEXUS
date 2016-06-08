@@ -225,7 +225,7 @@ namespace INTEGRAReports {
         private void InitClass() {
             this.DataSetName = "vBalanceTMPV2";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/vBalanceTMPV2.xsd";
+            this.Namespace = "http://www.integrasoftware.com.mxvBalanceTMPV2.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tablevBalanceTMP = new vBalanceTMPDataTable();

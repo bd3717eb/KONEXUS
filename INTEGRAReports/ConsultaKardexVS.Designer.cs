@@ -225,7 +225,7 @@ namespace INTEGRAReports {
         private void InitClass() {
             this.DataSetName = "ConsultaKardexVS";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/ConsultaKardexVS.xsd";
+            this.Namespace = "http://www.integrasoftware.com.mxConsultaKardexVS.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableEmpresa = new EmpresaDataTable();

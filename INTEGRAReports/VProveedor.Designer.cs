@@ -201,7 +201,7 @@ namespace INTEGRAReports {
         private void InitClass() {
             this.DataSetName = "VProveedor";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/VProveedor.xsd";
+            this.Namespace = "http://www.integrasoftware.com.mxVProveedor.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableProveedor = new ProveedorDataTable();

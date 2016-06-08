@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Data;
 using IntegraData;
 using System.Data.SqlClient;
@@ -57,6 +54,8 @@ namespace IntegraBussines
         public decimal? dSub { get; set; }
         public decimal? dIva { get; set; }
         public decimal? dTotal { get; set; }
+
+        public string sCondicionPago { get; set; }
         /*Facturacion variables necesarias*/
 
         public int SaveSale(int Moviment)
@@ -162,7 +161,7 @@ namespace IntegraBussines
             context.Parametros.Add(new SqlParameter("@family", ifamily));
 
             dt = context.ExecuteProcedure("sp_Venta_ObtieneDatosDeTiendaPorNumeroDeVenta_v1", true).Copy();
-            return dt; 
+            return dt;
         }
 
         public decimal GetStockStore(int icompany, int istore, int iproduct, int iconcept, int ifamily)
@@ -187,7 +186,7 @@ namespace IntegraBussines
                 }
             }
         }
-                
+
 
         //EL PROCEDIMIENTO NO SE ENCUENTRA EN INTEGRA DEMO
         //Al PARECER ESTE METODO NO SE UTILIZA
@@ -205,7 +204,7 @@ namespace IntegraBussines
             return dt;
         }
 
-      
+
         public DataTable GetDetailsTableFromSaleNumber(int company, int salenumber)
         {
             SQLConection context = new SQLConection();
@@ -247,7 +246,7 @@ namespace IntegraBussines
 
             return 0;
         }
-               
+
         //AL PARECER ESTE EVENTO NO SE UTILIZA EN LA SOLUCION
         public DataTable SearchSales(int icompany, int ioffice, int ifamily, int ifather, int istatus, DateTime? datefrom, DateTime? dateto, int isalefrom, int isaleto, int iclient)
         {
@@ -270,7 +269,7 @@ namespace IntegraBussines
             return dt;
 
         }
-      
+
         public DataTable GetZoneOffice(int icompany, int ioffice)
         {
             SQLConection context = new SQLConection();
@@ -300,7 +299,7 @@ namespace IntegraBussines
             return dt;
 
         }
-            
+
         public DataTable GetZoneRelationOffice(int company, int office)
         {
             SQLConection context = new SQLConection();
@@ -331,7 +330,7 @@ namespace IntegraBussines
             return dt;
         }
 
-  
+
         //EL PROCEDIMIENTO NO SE ENCUENTRA EN LA BASE DE DATOS INTEGRA_DEMO
         //AL PARECER ESTE EVENTO NO SE UTILIZA
         public DataTable GetConceptDescuento()
@@ -434,7 +433,7 @@ namespace IntegraBussines
             return dt;
         }
 
-      
+
         public DataTable GetInvoices()
         {
             SQLConection context = new SQLConection();
@@ -478,7 +477,7 @@ namespace IntegraBussines
             return dt;
         }
 
-       
+
         public DataTable GetDatosInternet()
         {
             SQLConection context = new SQLConection();
@@ -491,7 +490,7 @@ namespace IntegraBussines
             dt = context.ExecuteProcedure("sp_Venta_ObtieneDatosDeInternet_v1", true).Copy();
             return dt;
         }
-     
+
 
         public DataTable GetDatosCorreo()
         {
@@ -507,7 +506,7 @@ namespace IntegraBussines
             return dt;
         }
 
-      
+
         public DataTable GetIvaReceptor(int icompany, int inumero, int ifamily)
         {
             SQLConection context = new SQLConection();
@@ -572,7 +571,7 @@ namespace IntegraBussines
         //    return dt;
         //}
 
-      
+
         public DataTable GetAllStores(int company, int person)
         {
 
@@ -627,7 +626,7 @@ namespace IntegraBussines
             return IntegraBussines.SalesStoresBLL.GetVirtualStores(company, person, office);
         }
 
-    
+
         //public DataTable GetPriceFromListPrice(int company, int client, int t_concept, int product, int concept, decimal price)// si / ventas 
         //{
         //    DataTable dt = new DataTable();
@@ -652,7 +651,7 @@ namespace IntegraBussines
             return dt;
         }
 
-     
+
 
         public DataTable GetSalesValidations(int company)
         {
@@ -662,11 +661,11 @@ namespace IntegraBussines
             context.Parametros.Clear();
             context.Parametros.Add(new SqlParameter("@companynumber", company));
 
-            dt = context.ExecuteProcedure("sp_Venta_ObtieneValidacionDeVentas_v1", true).Copy(); 
+            dt = context.ExecuteProcedure("sp_Venta_ObtieneValidacionDeVentas_v1", true).Copy();
             return dt;
         }
 
-       
+
         public DataTable GetStoresValidationsAndMailCompany(int company)
         {
             SQLConection context = new SQLConection();
@@ -687,7 +686,7 @@ namespace IntegraBussines
             {
                 return SaleDAL.SpFacturaLibre(Moviment, Company, Number, Customer, Date, Documento, Serie, NumeroDocto, Reference,
                                              CurrencyInvoice, TypeChange, ConceptNumber, User, Credit, Observations, Notacargo,
-                                             CPayData, SPayData, Clas_Sucursal, dSub,dIva,dTotal);
+                                             CPayData, SPayData, Clas_Sucursal, dSub, dIva, dTotal, sCondicionPago);
             }
             catch
             {

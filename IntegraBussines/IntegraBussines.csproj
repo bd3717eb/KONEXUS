@@ -106,13 +106,13 @@
     <Compile Include="VentasController.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\IntegraData\IntegraData.csproj">
-      <Project>{42BACFC4-3E6C-40F0-8CD4-7C26348BACA8}</Project>
-      <Name>IntegraData</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <ProjectReference Include="..\IntegraData\IntegraData.csproj">
+      <Project>{42bacfc4-3e6c-40f0-8cd4-7c26348baca8}</Project>
+      <Name>IntegraData</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

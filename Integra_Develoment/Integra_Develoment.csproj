@@ -57,6 +57,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -67,6 +71,30 @@
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
@@ -76,12 +104,41 @@
   <ItemGroup>
     <Content Include="Background.aspx" />
     <Content Include="ClientAutocompleteWebService.asmx" />
+    <Content Include="ClientCuentasCobrarWebService.asmx" />
+    <Content Include="ClientCuentasPagarWebService.asmx" />
+    <Content Include="ClienteFacturaWebService.asmx" />
+    <Content Include="ClientNotasAutoWebService.asmx" />
+    <Content Include="ConsultasAutocomplete.asmx" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Images\calendario.png" />
+    <Content Include="Images\expand_blue.png" />
+    <Content Include="Images\fullscreen_16x16.png" />
+    <Content Include="Images\move_vertical_9x24.png" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\Scripts.js" />
+    <Content Include="Ventas\BuscarDevoluciones.aspx" />
+    <Content Include="Ventas\ConsultaDevolucion.aspx" />
+    <Content Include="Ventas\Groups.aspx" />
+    <Content Include="WebService1.asmx" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <None Include="Scripts\jquery-2.2.3.intellisense.js" />
+    <Content Include="GetProducts.asmx" />
     <Content Include="Global.asax" />
     <Content Include="Images\AppIco.png" />
     <Content Include="Images\AppIcoGreen.png" />
@@ -101,7 +158,13 @@
     <Content Include="Images\ModIcoBlue.png" />
     <Content Include="Images\ModIcoEvento.png" />
     <Content Include="Images\salir.png" />
+    <Content Include="Images\trash_stroke_16x16.png" />
+    <Content Include="Images\x_14x14.png" />
     <Content Include="MainMenu.aspx" />
+    <Content Include="PersonAutocompleteWebService.asmx" />
+    <Content Include="ProductosWebService.asmx" />
+    <Content Include="productsWebService.asmx" />
+    <Content Include="ProviderAutocompleteWebService.asmx" />
     <Content Include="Scripts\jquery-1.8.0.min.js" />
     <Content Include="Scripts\jquery-2.2.3.js" />
     <Content Include="Scripts\jquery-2.2.3.min.js" />
@@ -121,6 +184,7 @@
     <Content Include="Styles\jquery.datetimepicker.css" />
     <Content Include="Styles\Site.css" />
     <Content Include="Styles\styleIC.css" />
+    <Content Include="Ventas\FacturaLibreMorales.aspx" />
     <Content Include="Ventas\Ventas.aspx" />
     <Content Include="Web References\FacturaServicio\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
@@ -131,8 +195,11 @@
     <Content Include="Styles\styleIC.less" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Data\Addres.cs" />
     <Compile Include="App_Data\CFDIProgram.cs" />
     <Compile Include="App_Data\ConfiguracionVentasEmpresas.cs" />
+    <Compile Include="App_Data\Contact.cs" />
+    <Compile Include="App_Data\Credit.cs" />
     <Compile Include="App_Data\DropTool.cs" />
     <Compile Include="App_Data\GridViewTool.cs" />
     <Compile Include="App_Data\LabelTool.cs" />
@@ -143,8 +210,29 @@
     <Compile Include="Background.aspx.designer.cs">
       <DependentUpon>Background.aspx</DependentUpon>
     </Compile>
+    <Compile Include="App_Data\Client.cs" />
     <Compile Include="ClientAutocompleteWebService.asmx.cs">
       <DependentUpon>ClientAutocompleteWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClientCuentasCobrarWebService.asmx.cs">
+      <DependentUpon>ClientCuentasCobrarWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClientCuentasPagarWebService.asmx.cs">
+      <DependentUpon>ClientCuentasPagarWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClienteFacturaWebService.asmx.cs">
+      <DependentUpon>ClienteFacturaWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClientNotasAutoWebService.asmx.cs">
+      <DependentUpon>ClientNotasAutoWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConsultasAutocomplete.asmx.cs">
+      <DependentUpon>ConsultasAutocomplete.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Default.aspx.cs">
@@ -153,6 +241,10 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GetProducts.asmx.cs">
+      <DependentUpon>GetProducts.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -171,11 +263,58 @@
     <Compile Include="mpIntegraCompany.Master.designer.cs">
       <DependentUpon>mpIntegraCompany.Master</DependentUpon>
     </Compile>
+    <Compile Include="App_Data\Person.cs" />
+    <Compile Include="PersonAutocompleteWebService.asmx.cs">
+      <DependentUpon>PersonAutocompleteWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProductosWebService.asmx.cs">
+      <DependentUpon>ProductosWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="productsWebService.asmx.cs">
+      <DependentUpon>productsWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\Provider.cs" />
+    <Compile Include="App_Data\Controls.cs" />
+    <Compile Include="ProviderAutocompleteWebService.asmx.cs">
+      <DependentUpon>ProviderAutocompleteWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ventas\BuscarDevoluciones.aspx.cs">
+      <DependentUpon>BuscarDevoluciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ventas\BuscarDevoluciones.aspx.designer.cs">
+      <DependentUpon>BuscarDevoluciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\ConsultaDevolucion.aspx.cs">
+      <DependentUpon>ConsultaDevolucion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ventas\ConsultaDevolucion.aspx.designer.cs">
+      <DependentUpon>ConsultaDevolucion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\FacturaLibreMorales.aspx.cs">
+      <DependentUpon>FacturaLibreMorales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ventas\FacturaLibreMorales.aspx.designer.cs">
+      <DependentUpon>FacturaLibreMorales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\Groups.aspx.cs">
+      <DependentUpon>Groups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ventas\Groups.aspx.designer.cs">
+      <DependentUpon>Groups.aspx</DependentUpon>
     </Compile>
     <Compile Include="Ventas\Ventas.aspx.cs">
       <DependentUpon>Ventas.aspx</DependentUpon>
@@ -188,6 +327,10 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WebService1.asmx.cs">
+      <DependentUpon>WebService1.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -235,6 +378,7 @@
       <Name>INTEGRAReports</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

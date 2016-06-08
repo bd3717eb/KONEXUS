@@ -201,7 +201,7 @@ namespace INTEGRAReports {
         private void InitClass() {
             this.DataSetName = "vEstado_Resultados_AnualV2";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/vEstado_Resultados_AnualV2.xsd";
+            this.Namespace = "http://www.integrasoftware.com.mxvEstado_Resultados_AnualV2.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tablevEstado_Resultados_Anual = new vEstado_Resultados_AnualDataTable();

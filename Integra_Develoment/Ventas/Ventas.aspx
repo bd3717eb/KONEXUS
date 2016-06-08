@@ -247,9 +247,9 @@
                 <td>
                     <asp:TextBox ID="txtCliente" runat="server" CssClass="TextBoxEstilo" AutoPostBack="True"
                         OnTextChanged="Cliente_Changed" Width="250px" Height="18px"></asp:TextBox>
-                    <asp:AutoCompleteExtender ID="ace_txtCliente" runat="server" CompletionListHighlightedItemCssClass="autocomplete_highlightedListItem"
+                    <%--  <asp:AutoCompleteExtender ID="ace_txtCliente" runat="server" CompletionListHighlightedItemCssClass="autocomplete_highlightedListItem"
                         CompletionListItemCssClass="autocomplete_listItem" Enabled="true" ServicePath="~/ClientAutocompleteWebService.asmx" MinimumPrefixLength="1" ServiceMethod="GetClients" EnableCaching="true" TargetControlID="txtCliente" UseContextKey="true" CompletionSetCount="10" CompletionInterval="0">
-                    </asp:AutoCompleteExtender>
+                    </asp:AutoCompleteExtender>--%>
                 </td>
             </tr>
             <tr>
@@ -288,11 +288,15 @@
                 </td>
             </tr>
         </table>
-        <%--<asp:AutoCompleteExtender ID="AutoCompleteExtender2" runat="server" ServicePath="~/ClientAutocompleteWebService.asmx"
-            MinimumPrefixLength="1" ServiceMethod="GetClients" EnableCaching="true" TargetControlID="txtCliente"
-            UseContextKey="true" CompletionSetCount="10" CompletionInterval="0" CompletionListHighlightedItemCssClass="autocomplete_highlightedListItem"
+        <asp:AutoCompleteExtender ID="AutoCompleteExtender2"
+            runat="server"
+            ServicePath="~/ClientAutocompleteWebService.asmx"
+            MinimumPrefixLength="1" ServiceMethod="GetClients" EnableCaching="true"
+            TargetControlID="txtCliente"
+            UseContextKey="true" CompletionSetCount="10" CompletionInterval="0"
+            CompletionListHighlightedItemCssClass="autocomplete_highlightedListItem"
             CompletionListItemCssClass="autocomplete_listItem" OnClientItemSelected="GetKey">
-        </asp:AutoCompleteExtender>--%>
+        </asp:AutoCompleteExtender>
     </fieldset>
     <fieldset class="fieldset">
         <legend>&nbsp;</legend>
@@ -335,7 +339,7 @@
                     </asp:RadioButtonList>
                 </td>
                 <td>
-                    <asp:AutoCompleteExtender ID="AcxProductos" runat="server" ServicePath="../GetProducts.asmx"
+                    <asp:AutoCompleteExtender ID="AcxProductos" runat="server" ServicePath="~/GetProducts.asmx"
                         ServiceMethod="GetProduct" MinimumPrefixLength="1" EnableCaching="true" TargetControlID="txtProductos"
                         UseContextKey="true" CompletionSetCount="10" CompletionInterval="0" CompletionListHighlightedItemCssClass="autocomplete_highlightedListItem"
                         CompletionListItemCssClass="autocomplete_listItem" OnClientItemSelected="GetKey">
@@ -353,7 +357,7 @@
                     <asp:TextBox ID="txtCodigoBarras" runat="server" AutoPostBack="true" OnTextChanged="txtCodigoBarras_TextChanged"
                         ToolTip="Ingresar el producto deseado" CssClass="TextBoxEstilo" Width="150px">
                     </asp:TextBox>
-                    <asp:AutoCompleteExtender ID="AxcCodigoBarras" runat="server" ServicePath="../GetProducts.asmx"
+                    <asp:AutoCompleteExtender ID="AxcCodigoBarras" runat="server" ServicePath="~/GetProducts.asmx"
                         ServiceMethod="GetConceptosPorProducto" MinimumPrefixLength="1" EnableCaching="true"
                         TargetControlID="txtCodigoBarras" UseContextKey="true" CompletionSetCount="10"
                         CompletionInterval="0" CompletionListHighlightedItemCssClass="autocomplete_highlightedListItem"
@@ -363,14 +367,14 @@
             </tr>
         </table>
         <table id="TablaTitulos" runat="server" width="97%">
-            <tr class="GridViewHeaderStyle" style="background-color: #8DB3E2;">
+            <tr class="GridViewHeaderStyle">
                 <td align="center" width="5%" class="RadioButton">Partida
                 </td>
                 <td align="center" width="9%" class="RadioButton">Disponibles
                 </td>
                 <td align="center" width="17%" class="RadioButton">Almacén
                 </td>
-                <td align="center" width="35%px" class="RadioButton">Producto
+                <td align="center" width="35%" class="RadioButton">Producto
                 </td>
                 <td align="center" width="65px" class="RadioButton">Cantidad
                 </td>
@@ -393,19 +397,19 @@
                                 ViewStateMode="Enabled">
                                 <Columns>
                                     <asp:CommandField ShowSelectButton="True" HeaderText="Partida" ItemStyle-Width="38"
-                                        SelectText="Eliminar" ButtonType="Image" SelectImageUrl="~/Images/Ventas/eliminar2.png" />
-                                    <asp:BoundField HeaderText="Disponibles" ItemStyle-HorizontalAlign="Center" ItemStyle-Width="71" />
+                                        SelectText="Eliminar" ButtonType="Image" SelectImageUrl="~/Images/x_14x14.png" />
+                                    <asp:BoundField HeaderText="Disponibles" ItemStyle-HorizontalAlign="Right" ItemStyle-Width="71" />
                                     <asp:TemplateField HeaderText="Almacén" ItemStyle-Width="129" ItemStyle-HorizontalAlign="Center">
                                         <ItemTemplate>
-                                            <asp:DropDownList ID="storeDropDownList" runat="server" Width="89%" CssClass="DropDown"
-                                                AutoPostBack="true" Font-Names="Arial" Font-Size="9px" Height="15px" OnSelectedIndexChanged="storeDropDownList_SelectedIndexChanged" />
+                                            <asp:DropDownList ID="storeDropDownList" runat="server" Width="95%" CssClass="DropDown"
+                                                AutoPostBack="true" OnSelectedIndexChanged="storeDropDownList_SelectedIndexChanged" />
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                     <asp:BoundField DataField="Descripcion_Producto" ItemStyle-Width="266" />
                                     <asp:TemplateField ItemStyle-Width="71">
                                         <ItemTemplate>
                                             <asp:TextBox ID="cantidadtxt" MaxLength="50" runat="server" Text='<%# Bind("Cantidad") %>'
-                                                CssClass="TextBoxStyle" OnTextChanged="cantidadtxt_TextChanged" AutoPostBack="True">
+                                                CssClass="TextBoxEstilo" OnTextChanged="cantidadtxt_TextChanged" AutoPostBack="True">
                  
                                             </asp:TextBox>
                                             <asp:FilteredTextBoxExtender ID="FtdCantidad" runat="server" TargetControlID="cantidadtxt"
@@ -422,17 +426,11 @@
                                 </Columns>
                                 <EditRowStyle BackColor="#999999" />
                                 <AlternatingRowStyle CssClass="GridViewAlternatingRowStyle" />
-                                <FooterStyle CssClass="GridViewFooterStyle" BackColor="#5D7B9D" Font-Bold="True"
-                                    ForeColor="White" />
-                                <HeaderStyle BackColor="#8DB3E2" CssClass="GridViewHeaderStyle" />
-                                <PagerStyle BackColor="#284775" CssClass="GridViewPagerStyle" />
-                                <RowStyle BackColor="#F7F6F3" CssClass="GridViewRowStyle" />
-                                <SelectedRowStyle CssClass="GridViewSelectedRowStyle" BackColor="#E2DED6" Font-Bold="True"
-                                    ForeColor="#333333" />
-                                <SortedAscendingCellStyle BackColor="#E9E7E2" />
-                                <SortedAscendingHeaderStyle BackColor="#506C8C" />
-                                <SortedDescendingCellStyle BackColor="#FFFDF8" />
-                                <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+                                <FooterStyle CssClass="GridViewFooterStyle" />
+                                <HeaderStyle CssClass="GridViewHeaderStyle" />
+                                <PagerStyle CssClass="GridViewPagerStyle" />
+                                <RowStyle CssClass="GridViewRowStyle" />
+                                <SelectedRowStyle CssClass="GridViewSelectedRowStyle" />
                             </asp:GridView>
                             <asp:HiddenField ID="HdnValorIncorrecto" runat="server" />
                         </ContentTemplate>
@@ -476,23 +474,23 @@
                     <asp:AsyncPostBackTrigger ControlID="RdBtnListProductos" EventName="SelectedIndexChanged" />--%>
                 </Triggers>
                 <ContentTemplate>
-                    <div class="modalheader">
+                    <div>
                         <table width="100%">
-                            <tr>
+                            <tr class="GridViewHeaderStyle">
                                 <td>
-                                    <asp:Label ID="lblProductosEncabezado" runat="server" Text="Agregar productos" ForeColor="White"
-                                        Font-Size="Large" Font-Bold="true" Font-Names="Arial" />
+                                    <asp:Label ID="lblProductosEncabezado" runat="server" Text="Agregar productos"
+                                        Font-Size="18px" Font-Bold="true" />
                                 </td>
                                 <td align="right" valign="top">
-                                    <asp:ImageButton ID="productsimgbtn" runat="server" ImageUrl="../Images/GridImages/delete_grid.png"
+                                    <asp:ImageButton ID="productsimgbtn" runat="server" ImageUrl="~/Images/x_14x14.png"
                                         Width="20px" Height="20px" OnClick="productsimgbtn_Click" />
                                 </td>
                             </tr>
                         </table>
                     </div>
-                    <div class="TablegridSalesProducts">
-                        <table id="TablaTituloProductos" runat="server" width="96%">
-                            <tr class="GridViewHeaderStyle" style="background-color: #8DB3E2;">
+                    <div class="TablegridSalesProducts" style="margin-top: -3px;">
+                        <table id="TablaTituloProductos" runat="server" width="100%">
+                            <tr class="GridViewHeaderStyle">
                                 <td align="center" width="60px" class="RadioButton">Cantidad
                                 </td>
                                 <td align="center" width="190px" class="RadioButton">Producto
@@ -511,8 +509,8 @@
                     <div class="modalbodyadd">
                         <div id="scrollagregar" class="GridScroll">
                             <asp:GridView ID="GrvProductos" runat="server" CellPadding="4" CssClass="GridViewStyle"
-                                Width="99%" AutoGenerateColumns="false" ForeColor="#333333" GridLines="None"
-                                Font-Size="Small" EnableViewState="true" ShowHeader="false">
+                                Width="99%" AutoGenerateColumns="false" GridLines="None"
+                                EnableViewState="true" ShowHeader="false">
                                 <Columns>
                                     <asp:TemplateField HeaderText="Cantidad">
                                         <ItemTemplate>
@@ -542,18 +540,16 @@
                                 </Columns>
                                 <EditRowStyle BackColor="#999999" />
                                 <AlternatingRowStyle CssClass="GridViewAlternatingRowStyle" />
-                                <FooterStyle BackColor="#5D7B9D" CssClass="GridViewFooterStyle" />
-                                <HeaderStyle BackColor="#8DB3E2" CssClass="GridViewHeaderStyle" />
-                                <PagerStyle BackColor="#284775" CssClass="GridViewPagerStyle" />
-                                <RowStyle BackColor="#F7F6F3" CssClass="GridViewRowStyle" />
-                                <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-                                <SortedAscendingCellStyle BackColor="#E9E7E2" />
-                                <SortedAscendingHeaderStyle BackColor="#506C8C" />
-                                <SortedDescendingCellStyle BackColor="#FFFDF8" />
-                                <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+                                <FooterStyle CssClass="GridViewFooterStyle" />
+                                <HeaderStyle CssClass="GridViewHeaderStyle" />
+                                <PagerStyle CssClass="GridViewPagerStyle" />
+                                <RowStyle CssClass="GridViewRowStyle" />
+                                <SelectedRowStyle CssClass="GridViewSelectStyle" />
+
                             </asp:GridView>
                         </div>
                     </div>
+                    <%--<div class="modalfooter" style="overflow: hidden;">--%>
                     <div class="modalfooter" style="overflow: hidden;">
                         <asp:LinkButton Width="100%" ID="lnkAgregaProductos" ForeColor="White" CssClass="linkmodal"
                             runat="server" OnClick="lnkAgregaProductos_Click">Agregar </asp:LinkButton>
@@ -998,7 +994,7 @@
                                                     <asp:TemplateField>
                                                         <ItemTemplate>
                                                             <asp:TextBox ID="txtIngreso" Text='<%# "$" + Eval("Ingreso") %>' runat="server" MaxLength="20"
-                                                                onclick="redir(this)" onblur="redirb(this)" CssClass="TextBoxStyleImport" Style="text-align: right;"
+                                                                onclick="redir(this)" onblur="redirb(this)" CssClass="TextBoxEstiloImport" Style="text-align: right;"
                                                                 Width="100px" AutoPostBack="true" class="ingreso" OnTextChanged="ImporteTextChanged"> </asp:TextBox>
                                                             <asp:FilteredTextBoxExtender ID="FtdTxTExtimporte" runat="server" TargetControlID="txtIngreso"
                                                                 FilterType="Custom, Numbers" ValidChars=".,$"></asp:FilteredTextBoxExtender>
@@ -1024,15 +1020,12 @@
                                                 </Columns>
                                                 <EditRowStyle BackColor="#999999" />
                                                 <AlternatingRowStyle CssClass="GridViewAlternatingRowStyle" />
-                                                <FooterStyle BackColor="#5D7B9D" CssClass="GridViewFooterStyle" />
-                                                <HeaderStyle BackColor="#69bbef" CssClass="GridViewHeaderStyle" />
-                                                <PagerStyle BackColor="#284775" CssClass="GridViewPagerStyle" />
-                                                <RowStyle BackColor="#F7F6F3" CssClass="GridViewRowStyle" />
-                                                <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-                                                <SortedAscendingCellStyle BackColor="#E9E7E2" />
-                                                <SortedAscendingHeaderStyle BackColor="#506C8C" />
-                                                <SortedDescendingCellStyle BackColor="#FFFDF8" />
-                                                <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+                                                <FooterStyle CssClass="GridViewFooterStyle" />
+                                                <HeaderStyle CssClass="GridViewHeaderStyle" />
+                                                <PagerStyle CssClass="GridViewPagerStyle" />
+                                                <RowStyle CssClass="GridViewRowStyle" />
+                                                <SelectedRowStyle CssClass="GridViewSelectStyle" />
+
                                             </asp:GridView>
                                         </td>
                                     </tr>
@@ -1390,7 +1383,7 @@
                                     <asp:TemplateField HeaderText="Importe">
                                         <ItemTemplate>
                                             <asp:TextBox ID="txtIngreso" Text='<%# "$" + Eval("Egreso") %>' runat="server" MaxLength="20"
-                                                onclick="redircambio(this)" onblur="redirbcambio(this)" CssClass="TextBoxStyleChange"
+                                                onclick="redircambio(this)" onblur="redirbcambio(this)" CssClass="TextBoxEstiloChange"
                                                 Style="text-align: right;" Width="100px" AutoPostBack="true" OnTextChanged="ImporteCambioTextChanged"> </asp:TextBox>
                                             <asp:FilteredTextBoxExtender ID="FtdTxTExtimporte" runat="server" TargetControlID="txtIngreso"
                                                 FilterType="Custom, Numbers" ValidChars=".,$"></asp:FilteredTextBoxExtender>
@@ -1399,15 +1392,12 @@
                                 </Columns>
                                 <EditRowStyle BackColor="#999999" />
                                 <AlternatingRowStyle CssClass="GridViewAlternatingRowStyle" />
-                                <FooterStyle BackColor="#5D7B9D" CssClass="GridViewFooterStyle" />
-                                <HeaderStyle BackColor="#8DB3E2" CssClass="GridViewHeaderStyle" />
-                                <PagerStyle BackColor="#284775" CssClass="GridViewPagerStyle" />
-                                <RowStyle BackColor="#F7F6F3" CssClass="GridViewRowStyle" />
-                                <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-                                <SortedAscendingCellStyle BackColor="#E9E7E2" />
-                                <SortedAscendingHeaderStyle BackColor="#506C8C" />
-                                <SortedDescendingCellStyle BackColor="#FFFDF8" />
-                                <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+                                <FooterStyle CssClass="GridViewFooterStyle" />
+                                <HeaderStyle CssClass="GridViewHeaderStyle" />
+                                <PagerStyle CssClass="GridViewPagerStyle" />
+                                <RowStyle CssClass="GridViewRowStyle" />
+                                <SelectedRowStyle CssClass="GridViewSelectStyle" />
+
                             </asp:GridView>
                             <table>
                                 <tr>

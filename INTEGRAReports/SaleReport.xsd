@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?> 
 <xs:schema id="SaleReport" 
-                  targetNamespace="http://tempuri.org/SaleReport.xsd"
+                  targetNamespace="http://www.integrasoftware.com.mxSaleReport.xsd"
                   elementFormDefault="qualified"
                   attributeFormDefault="qualified"
-                  xmlns="http://tempuri.org/SaleReport.xsd"
-                  xmlns:mstns="http://tempuri.org/SaleReport.xsd"
+                  xmlns="http://www.integrasoftware.com.mxSaleReport.xsd"
+                  xmlns:mstns="http://www.integrasoftware.com.mxSaleReport.xsd"
                   xmlns:xs="http://www.w3.org/2001/XMLSchema"
                   xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
                   xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">

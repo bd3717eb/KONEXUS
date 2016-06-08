@@ -319,15 +319,6 @@ namespace Integra_Develoment.Ventas {
         protected global::System.Web.UI.WebControls.TextBox txtCliente;
         
         /// <summary>
-        /// ace_txtCliente control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.AutoCompleteExtender ace_txtCliente;
-        
-        /// <summary>
         /// lblNombrecliente control.
         /// </summary>
         /// <remarks>
@@ -371,6 +362,15 @@ namespace Integra_Develoment.Ventas {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblEstado;
+        
+        /// <summary>
+        /// AutoCompleteExtender2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.AutoCompleteExtender AutoCompleteExtender2;
         
         /// <summary>
         /// HdnEmpresa control.

@@ -5814,7 +5814,7 @@ namespace Integra_Develoment.Ventas
 
         protected void FacturaLibreClick(object sender, EventArgs e)
         {
-            Response.Redirect("FacturaLibreMorales.aspx");
+            Response.Redirect("FacturaLibreMorales.aspx?Client=" + HdnCliente.Value.ToString());
         }
         protected void FacturaGobiernoClick(object sender, EventArgs e)
         {

@@ -201,7 +201,7 @@ namespace INTEGRAReports {
         private void InitClass() {
             this.DataSetName = "SaleDocumentReport";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/SaleDocumentReport.xsd";
+            this.Namespace = "http://www.integrasoftware.com.mxSaleDocumentReport.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableSaleDocument = new SaleDocumentDataTable();

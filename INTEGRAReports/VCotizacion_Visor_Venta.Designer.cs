@@ -273,7 +273,7 @@ namespace INTEGRAReports {
         private void InitClass() {
             this.DataSetName = "VCotizacion_Visor_Venta";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/VCotizacion_Visor_Venta.xsd";
+            this.Namespace = "http://www.integrasoftware.com.mxVCotizacion_Visor_Venta.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableEmpresa = new EmpresaDataTable();
